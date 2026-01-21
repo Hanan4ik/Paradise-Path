@@ -1,0 +1,14 @@
+#Hide arcana bar unless depleted.
+hideArcanaBar = true
+#Horizontal position of the arcana bar.
+# Default: 111
+# Range: > 0
+arcanaBarXPos = 111
+#Vertical position of the arcana bar.
+# Default: 18
+# Range: > 0
+arcanaBarYPos = 18
+#Show welcome message.
+welcomeMessage = false
+#Efficiency and Harvest Level tooltips for tools.
+enableToolTooltipification = true

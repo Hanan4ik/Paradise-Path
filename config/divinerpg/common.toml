@@ -1,0 +1,10 @@
+#Player's maximum arcana capacity.
+# Default: 200.0
+# Range: 0.0 ~ 3.4028234663852886E38
+maxArcana = 200.0
+#Maximum amount of loaded mobs before the Frosted Allure stops working.
+# Default: 300
+# Range: > 0
+allureMaxMobs = 300
+#Safer handling of the Vethean inventory; adds a requirement to clear the inventory before entering Vethea.
+saferVetheanInventory = false

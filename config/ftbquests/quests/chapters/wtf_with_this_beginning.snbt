@@ -1,0 +1,128 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "wtf_with_this_beginning"
+	group: "1580B56BA7897E10"
+	id: "01BA24252C9ED0A4"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			id: "30E4DE6DFFFB4024"
+			tasks: [{
+				id: "2F9951ACFB09A77F"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:logs)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -13.0d
+			y: 2.0d
+		}
+		{
+			id: "393DC85FFCAB7BD9"
+			tasks: [{
+				count: 2L
+				id: "1886166CFBAECC56"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:planks)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			id: "270670471F8C5E69"
+			tasks: [{
+				count: 4L
+				id: "1F291A0A702FC448"
+				item: { count: 1, id: "minecraft:stick" }
+				type: "item"
+			}]
+			x: -9.0d
+			y: 2.0d
+		}
+		{
+			icon: {
+				id: "minecraft:wooden_pickaxe"
+			}
+			id: "12FD8265219E721B"
+			tasks: [
+				{
+					id: "11B4223A15FAE6BF"
+					item: { count: 1, id: "kubejs:wooden_pickaxe_head" }
+					type: "item"
+				}
+				{
+					id: "482221FDAECB0EF5"
+					item: { count: 1, id: "kubejs:wooden_grip" }
+					type: "item"
+				}
+				{
+					id: "0FF9C13F5BE6AD53"
+					item: { count: 1, id: "minecraft:wooden_pickaxe" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 2.0d
+		}
+		{
+			id: "42DE9D25819D23C0"
+			tasks: [
+				{
+					id: "133BC5B2FC34085F"
+					item: { count: 1, id: "kubejs:wooden_grip" }
+					type: "item"
+				}
+				{
+					id: "1CD8EEF5C4583FA2"
+					item: { count: 1, id: "kubejs:wooden_axe_head" }
+					type: "item"
+				}
+				{
+					id: "064F013A2EC154F0"
+					item: { count: 1, id: "minecraft:wooden_axe" }
+					type: "item"
+				}
+			]
+			x: -7.5d
+			y: 1.0d
+		}
+		{
+			id: "436B576796474036"
+			tasks: [{
+				count: 16L
+				id: "5159FACFE53FC20D"
+				item: { count: 1, id: "minecraft:cobblestone" }
+				type: "item"
+			}]
+			x: -7.0d
+			y: 3.5d
+		}
+		{
+			id: "7863F33E915A8CBF"
+			tasks: [{
+				id: "603C0BBC2F58E791"
+				item: { count: 1, id: "minecraft:coal" }
+				type: "item"
+			}]
+			x: -5.0d
+			y: 3.5d
+		}
+		{
+			id: "75F96AF5707949EB"
+			tasks: [
+				{
+					id: "61F4D8AD5F39EB3A"
+					item: { count: 1, id: "minecraft:stone_pickaxe" }
+					type: "item"
+				}
+				{
+					id: "2BC6E60D062BB4A0"
+					item: { count: 1, id: "minecraft:stone_axe" }
+					type: "item"
+				}
+			]
+			x: -6.0d
+			y: 5.0d
+		}
+	]
+}
