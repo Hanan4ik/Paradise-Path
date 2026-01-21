@@ -58,5 +58,6 @@ StartupEvents.registry('item', event => {
   .displayName('Stone Axe Head')
   .texture('kubejs:item/stone_axe_head')
 
-  
+  event.create('hinge')
+  .displayName('Hinge') 
 });

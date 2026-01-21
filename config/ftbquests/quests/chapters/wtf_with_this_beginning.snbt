@@ -3,6 +3,9 @@
 	default_quest_shape: ""
 	filename: "wtf_with_this_beginning"
 	group: "1580B56BA7897E10"
+	icon: {
+		id: "minecraft:wooden_pickaxe"
+	}
 	id: "01BA24252C9ED0A4"
 	order_index: 0
 	quest_links: [ ]
@@ -18,6 +21,7 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["30E4DE6DFFFB4024"]
 			id: "393DC85FFCAB7BD9"
 			tasks: [{
 				count: 2L
@@ -29,6 +33,7 @@
 			y: 2.0d
 		}
 		{
+			dependencies: ["393DC85FFCAB7BD9"]
 			id: "270670471F8C5E69"
 			tasks: [{
 				count: 4L
@@ -40,6 +45,10 @@
 			y: 2.0d
 		}
 		{
+			dependencies: [
+				"270670471F8C5E69"
+				"393DC85FFCAB7BD9"
+			]
 			icon: {
 				id: "minecraft:wooden_pickaxe"
 			}
@@ -61,10 +70,14 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: 2.0d
+			x: -9.0d
+			y: 3.5d
 		}
 		{
+			dependencies: [
+				"270670471F8C5E69"
+				"393DC85FFCAB7BD9"
+			]
 			id: "42DE9D25819D23C0"
 			tasks: [
 				{
@@ -83,10 +96,11 @@
 					type: "item"
 				}
 			]
-			x: -7.5d
-			y: 1.0d
+			x: -9.0d
+			y: 0.5d
 		}
 		{
+			dependencies: ["12FD8265219E721B"]
 			id: "436B576796474036"
 			tasks: [{
 				count: 16L
@@ -95,19 +109,21 @@
 				type: "item"
 			}]
 			x: -7.0d
-			y: 3.5d
+			y: 2.5d
 		}
 		{
+			dependencies: ["12FD8265219E721B"]
 			id: "7863F33E915A8CBF"
 			tasks: [{
 				id: "603C0BBC2F58E791"
 				item: { count: 1, id: "minecraft:coal" }
 				type: "item"
 			}]
-			x: -5.0d
-			y: 3.5d
+			x: -7.0d
+			y: 1.5d
 		}
 		{
+			dependencies: ["436B576796474036"]
 			id: "75F96AF5707949EB"
 			tasks: [
 				{
@@ -121,8 +137,60 @@
 					type: "item"
 				}
 			]
-			x: -6.0d
-			y: 5.0d
+			x: -5.5d
+			y: 3.5d
+		}
+		{
+			dependencies: ["75F96AF5707949EB"]
+			id: "0330BF41C027A56B"
+			tasks: [{
+				count: 2L
+				id: "4F26E1FE683A4C63"
+				item: { count: 1, id: "kubejs:crafting_table_base" }
+				type: "item"
+			}]
+			x: -5.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"0330BF41C027A56B"
+				"2BC6E60D062BB4A0"
+				"61F4D8AD5F39EB3A"
+			]
+			id: "34FDD0258C790372"
+			tasks: [{
+				id: "31D69C933413E18E"
+				item: { count: 1, id: "minecraft:crafting_table" }
+				type: "item"
+			}]
+			x: -4.0d
+			y: 4.0d
+		}
+		{
+			dependencies: [
+				"7863F33E915A8CBF"
+				"34FDD0258C790372"
+			]
+			id: "6A366D8EBC0C8A98"
+			tasks: [{
+				id: "14EA65003DA951B9"
+				item: { count: 1, id: "minecraft:furnace" }
+				type: "item"
+			}]
+			x: -3.5d
+			y: 2.0d
+		}
+		{
+			dependencies: ["6A366D8EBC0C8A98"]
+			id: "09584E7E5748E33B"
+			tasks: [{
+				id: "7B212E9DA0B32BA4"
+				item: { count: 1, id: "minecraft:iron_ingot" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 2.0d
 		}
 	]
 }

@@ -56,16 +56,20 @@ ServerEvents.recipes(event => {
 
     // Deletion of recipies
 
-    event.remove( {mod: 'minecraft', output: 'minecraft:crafting_table'} );
+    event.remove( {mod: 'minecraft', output: 'minecraft:crafting_table'} ); //
     
-    event.remove( {mod: 'minecraft', output: '#minecraft:planks'} );
-    event.remove( {mod: 'biomesoplenty', output: '#minecraft:planks'} );
-    event.remove( {mod: 'divinerpg', output: '#minecraft:planks'} );
-    event.remove( {mod: 'twilightforest', output: '#minecraft:planks'} );
-    event.remove( {mod: 'arsnouveau', output: '#minecraft:planks'} );
-    event.remove( {mod: 'occultism', output: '#minecraft:planks'} );
-    event.remove( {mod: 'ars_nouveau', output: '#minecraft:planks'} );
+    event.remove( {mod: 'minecraft', output: '#minecraft:planks'} ); //
+    event.remove( {mod: 'biomesoplenty', output: '#minecraft:planks'} ); //
+    event.remove( {mod: 'divinerpg', output: '#minecraft:planks'} ); // 
+    event.remove( {mod: 'twilightforest', output: '#minecraft:planks'} ); //
+    event.remove( {mod: 'arsnouveau', output: '#minecraft:planks'} ); //
+    event.remove( {mod: 'occultism', output: '#minecraft:planks'} ); //
+    event.remove( {mod: 'ars_nouveau', output: '#minecraft:planks'} ); //
 
+    event.remove( {output: 'minecraft:furnace'} ); //
+
+    event.remove( {output: 'minecraft:chest'} );
+    event.remove( {output: 'minecraft:ender_chest' });
     
     // Adding recipies for custom items
     
@@ -176,5 +180,99 @@ ServerEvents.recipes(event => {
     ], {
         A: "#minecraft:planks"
     }).noMirror();
+
+    event.shaped('kubejs:stone_axe_head', [
+        'AA ',
+        'A  '
+    ], {
+        A: "#c:cobblestones/normal"
+    }).noMirror();
+
+    event.shaped('kubejs:stone_pickaxe_head', [
+        ' AA',
+        '  A'
+    ], {
+        A: "#c:cobblestones/normal"
+    }).noMirror();
+    
+    event.shaped('kubejs:compressed_cobblestone', [
+        'CCC',
+        'CCC',
+        'CCC',
+    ], {
+        C: 'minecraft:cobblestone'
+    })
+    event.shaped('6x kubejs:compressed_cobblestone_slab', [
+        'CCC'
+    ], {
+        C: 'kubejs:compressed_cobblestone'
+    });
+    event.shaped('kubejs:compressed_cobblestone', [
+        'A',
+        'A'
+    ], {
+        A: 'kubejs:compressed_cobblestone_slab'
+    });
+    event.stonecutting('2x kubejs:compressed_cobblestone_slab', 'kubejs:compressed_cobblestone');
+
+
+    event.shaped('kubejs:double_compressed_cobblestone', [
+        'CCC',
+        'CCC',
+        'CCC',
+    ], {
+        C: 'kubejs:compressed_cobblestone'
+    });
+    event.shaped('6x kubejs:double_compressed_cobblestone_slab', [
+        'CCC'
+    ], {
+        C: 'kubejs:double_compressed_cobblestone'
+    });
+    event.shaped('kubejs:double_compressed_cobblestone', [
+        'A',
+        'A'
+    ], {
+        A: 'kubejs:double_compressed_cobblestone_slab'
+    });
+    event.stonecutting('2x kubejs:double_compressed_cobblestone_slab', 'kubejs:double_compressed_cobblestone');
+
+
+    event.shaped('kubejs:triple_compressed_cobblestone', [
+        'CCC',
+        'CCC',
+        'CCC',
+    ], {
+        C: 'kubejs:double_compressed_cobblestone'
+    });
+    event.shaped('6x kubejs:triple_compressed_cobblestone_slab', [
+        'CCC'
+    ], {
+        C: 'kubejs:triple_compressed_cobblestone'
+    });
+    event.shaped('kubejs:triple_compressed_cobblestone', [
+        'A',
+        'A'
+    ], {
+        A: 'kubejs:triple_compressed_cobblestone_slab'
+    });
+    event.stonecutting('3x kubejs:triple_compressed_cobblestone_slab', 'kubejs:triple_compressed_cobblestone');
+
+    event.shaped('minecraft:furnace', [
+        'CcC',
+        'CBC',
+        'CcC',
+    ], {
+        C: 'kubejs:compressed_cobblestone',
+        c: 'kubejs:compressed_cobblestone_slab',
+        B: 'minecraft:coal_block'
+    });
+
+    event.shaped('kubejs:hinge', [
+        'iIi'
+    ], {
+        i: 'minecraft:iron_nugget',
+        I: 'minecraft:iron_ingot'
+    });
+
 });
 

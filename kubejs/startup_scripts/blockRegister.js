@@ -158,6 +158,62 @@ StartupEvents.registry('block', event => {
     .hardness(2.0)
     .mapColor('wood')
     .soundType('wood')
-    .tagBlock('minecraft:mineable/axe')
+    .tagBlock('minecraft:mineable/axe');
     
-});
+    event.create('compressed_cobblestone')
+        .displayName('Compressed Cobblestone')
+        .mapColor('stone')
+        .hardness(5.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_stone_tool')
+        .requiresTool(true);
+
+    event.create('compressed_cobblestone_slab', 'slab')
+        .displayName('Compressed Cobblestone Slab')
+        .mapColor('stone')
+        .hardness(5.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool')
+        .requiresTool(true)
+        .texture('all', 'kubejs:block/compressed_cobblestone');
+    
+        event.create('double_compressed_cobblestone')
+        .displayName('Double Compressed Cobblestone')
+        .mapColor('stone')
+        .hardness(7.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(true);
+
+        event.create('double_compressed_cobblestone_slab', 'slab')
+        .displayName('Double Compressed Cobblestone Slab')
+        .mapColor('stone')
+        .hardness(7.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_iron_tool')
+        .requiresTool(true)
+        .texture('all', 'kubejs:block/double_compressed_cobblestone');
+    
+    event.create('triple_compressed_cobblestone')
+        .displayName('Triple Compressed Cobblestone')
+        .mapColor('stone')
+        .hardness(10.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool')
+        .requiresTool(true);
+
+    event.create('triple_compressed_cobblestone_slab', 'slab')
+        .displayName('Triple Compressed Cobblestone Slab')
+        .mapColor('stone')
+        .hardness(10.0)
+        .soundType('stone')
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool')
+        .requiresTool(true)
+        .texture('all', 'kubejs:block/triple_compressed_cobblestone');
+    })

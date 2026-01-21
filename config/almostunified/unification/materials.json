@@ -2,10 +2,10 @@
   "mod_priorities": [
     "minecraft",
     "kubejs",
+    "modern_industrialization",
     "create",
     "immersiveengineering",
-    "mekanism",
-    "modern_industrialization"
+    "mekanism"
   ],
   "priority_overrides": {},
   "stone_variants": [
