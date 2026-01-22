@@ -16,10 +16,14 @@
   // Items here will be unusable completely
   //    Example: minecraft:diamond
   "blacklisted_items": [
-//    "twilightforest:*chest",
-    "twilightforest:uncrafting_table,
-  //  "ae2:*chest",
-    //"ars_nouveau:*chest",
+    "twilightforest:uncrafting_table",
+    "!twilightforest:.*_chest",
+    "!ae2:.*_chest",
+    "ars_nouveau:archwood_chest",
+    "divinerpg:bone_chest",
+    "divinerpg:frosted_chest",
+    "divinerpg:present_box"
+
   ],
   // -----------------------------------------------------------
   // Removes an item if it contains certain nbt tag. If the whole entry (or expression) is present, the item gets removed.

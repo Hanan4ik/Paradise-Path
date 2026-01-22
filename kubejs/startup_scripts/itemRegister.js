@@ -56,8 +56,11 @@ StartupEvents.registry('item', event => {
 
   event.create('stone_axe_head')
   .displayName('Stone Axe Head')
-  .texture('kubejs:item/stone_axe_head')
+  .texture('kubejs:item/stone_axe_head');
 
   event.create('hinge')
-  .displayName('Hinge') 
+  .displayName('Hinge');
+
+  event.create('fire_making_equipment')
+  .displayName('Fire Making Equipment');
 });

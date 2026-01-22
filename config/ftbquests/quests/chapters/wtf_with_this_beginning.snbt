@@ -192,5 +192,60 @@
 			x: -1.5d
 			y: 2.0d
 		}
+		{
+			dependencies: ["09584E7E5748E33B"]
+			id: "46D2FD668BB4AB0E"
+			tasks: [{
+				id: "0208FFE195BE1775"
+				item: { count: 1, id: "ironchest:iron_chest" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["46D2FD668BB4AB0E"]
+			id: "1A8EC03E73DD73EA"
+			tasks: [{
+				id: "2EDBAFCF36AF8880"
+				item: { count: 1, id: "ironchest:gold_chest" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 5.0d
+		}
+		{
+			dependencies: ["1A8EC03E73DD73EA"]
+			id: "06617C26C3E662FB"
+			tasks: [{
+				id: "58D251EF390E654B"
+				item: { count: 1, id: "ironchest:diamond_chest" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["06617C26C3E662FB"]
+			id: "6EAD520576CE988D"
+			tasks: [{
+				id: "6385CFB415F96236"
+				item: { count: 1, id: "ironchest:crystal_chest" }
+				type: "item"
+			}]
+			x: -2.0d
+			y: 7.0d
+		}
+		{
+			dependencies: ["06617C26C3E662FB"]
+			id: "096B5B4A100AD8D9"
+			tasks: [{
+				id: "7A61D0385DC34413"
+				item: { count: 1, id: "ironchest:obsidian_chest" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: 6.0d
+		}
 	]
 }

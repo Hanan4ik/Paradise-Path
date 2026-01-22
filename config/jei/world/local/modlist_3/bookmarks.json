@@ -1,0 +1,5 @@
+[
+  {"version":2},
+  {"recipe":"occultism:crafting/divination_rod","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
+  {"ingredient":{"id":"kubejs:fire_making_equipment"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]

@@ -1,13 +1,10 @@
 {
 	default_hide_dependency_lines: false
 	default_quest_shape: ""
-	filename: "its_spinning"
+	filename: "two_eyes_arent_enough"
 	group: "1580B56BA7897E10"
-	icon: {
-		id: "create:wrench"
-	}
-	id: "744EC85C71CC39BB"
-	order_index: 2
+	id: "69D932BF3A155944"
+	order_index: 1
 	quest_links: [ ]
 	quests: [ ]
 }

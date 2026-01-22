@@ -216,4 +216,32 @@ StartupEvents.registry('block', event => {
         .tagBlock('minecraft:needs_diamond_tool')
         .requiresTool(true)
         .texture('all', 'kubejs:block/triple_compressed_cobblestone');
-    })
+
+    event.create('compressed_obsidian')
+        .displayName('Compressed Obsidian')
+        .mapColor('stone')
+        .soundType('stone')
+        .requiresTool(true)
+        .hardness(80)
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool');
+    
+    event.create('double_compressed_obsidian')
+        .displayName('Double Compressed Obsidian')
+        .mapColor('stone')
+        .soundType('stone')
+        .requiresTool(true)
+        .hardness(100)
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool');
+
+    event.create('triple_compressed_obsidian')
+        .displayName('Triple Compressed Obsidian')
+        .mapColor('stone')
+        .soundType('stone')
+        .requiresTool(true)
+        .hardness(120)
+        .tagBlock('minecraft:mineable/pickaxe')
+        .tagBlock('minecraft:needs_diamond_tool');
+    
+    });

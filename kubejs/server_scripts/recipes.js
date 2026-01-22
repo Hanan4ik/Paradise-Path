@@ -1,58 +1,29 @@
 // Visit the wiki for more info - https://kubejs.com/
 console.info('Hello, World! (Loaded server example script)');
+import { WOOD, format } from constants;
 
+// For wood 
 
-function format(str, value0, value1) {
-  return str.replace(/{0}/g, value0).replace(/{1}/g, value1);
-}
-
-const LOGS = [
-        'minecraft:{0}oak_{1}',
-        'minecraft:{0}birch_{1}',
-        'minecraft:{0}spruce_{1}',
-        'minecraft:{0}jungle_{1}',
-        'minecraft:{0}acacia_{1}',
-        'minecraft:{0}dark_oak_{1}',
-        'minecraft:{0}mangrove_{1}',
-        'minecraft:{0}cherry_{1}',
-        'biomesoplenty:{0}fir_{1}',
-        'biomesoplenty:{0}pine_{1}',
-        'biomesoplenty:{0}maple_{1}',
-        'biomesoplenty:{0}redwood_{1}',
-        'biomesoplenty:{0}mahogany_{1}',
-        'biomesoplenty:{0}jacaranda_{1}',
-        'biomesoplenty:{0}palm_{1}',
-        'biomesoplenty:{0}willow_{1}',
-        'biomesoplenty:{0}dead_{1}',
-        'biomesoplenty:{0}magic_{1}',
-        'biomesoplenty:{0}umbran_{1}',
-        'biomesoplenty:{0}hellbark_{1}',
-        'biomesoplenty:{0}empyreal_{1}',
-        'biomesoplenty:{0}fir_{1}',
-        'divinerpg:{0}divine_{1}',
-        'divinerpg:{0}shiverspine_{1}',
-        'divinerpg:{0}auroraoak_{1}',
-        'divinerpg:{0}cozybark_{1}',
-        'divinerpg:{0}streamleaf_{1}',
-        'divinerpg:{0}eucalyptus_{1}',
-        'divinerpg:{0}eden_{1}',
-        'divinerpg:{0}wildwood_{1}',
-        'divinerpg:{0}apalachia_{1}',
-        'divinerpg:{0}skythern_{1}',
-        'divinerpg:{0}apalachia_{1}',
-        'divinerpg:{0}mortum_{1}',
-        'twilightforest:{0}twilight_oak_{1}',
-        'twilightforest:{0}twilight_oak_{1}',
-        'twilightforest:{0}canopy_{1}',
-        'twilightforest:{0}mangrove_{1}',
-        'twilightforest:{0}dark_{1}',
-        'twilightforest:{0}time_{1}',
-        'twilightforest:{0}transformation_{1}',
-        'twilightforest:{0}mining_{1}',
-        'twilightforest:{0}sorting_{1}',
-    ]
 
 ServerEvents.recipes(event => {
+
+    const compressed_recipe = (output, input) => {
+        event.shaped(output, [
+            'III',
+            'III',
+            'III'
+        ], {I: input});
+    }
+    const slab_recipe = (slab, block) => {
+        event.shaped(Item.of(slab, 6), [
+            'III'
+        ], {I: block});
+
+        event.stonecutting(Item.of(slab, 2), block);
+
+        event.shaped(Item.of(block),['I','I'], {I:slab});
+    }
+
 
     // Deletion of recipies
 
@@ -70,28 +41,30 @@ ServerEvents.recipes(event => {
 
     event.remove( {output: 'minecraft:chest'} );
     event.remove( {output: 'minecraft:ender_chest' });
+
+    event.remove( {output:'minecraft:flint_and_steel' });
     
     // Adding recipies for custom items
     
+    WOOD.forEach(wood => {
 
-    for (let i=0; i < LOGS.length; i++){
-        event.shapeless(Item.of(format(LOGS[i], '', 'planks'), 2),
+        event.shapeless(Item.of(format(wood, '', 'planks'), 2),
         [
-            format(LOGS[i], '', 'log')
+            format(wood, '', 'log')
         ]);
-        event.shapeless(Item.of(format(LOGS[i], '', 'planks'), 2),
+        event.shapeless(Item.of(format(wood, '', 'planks'), 2),
         [
-            format(LOGS[i], '', 'wood')
+            format(wood, '', 'wood')
         ]);
-        event.shapeless(Item.of(format(LOGS[i], '', 'planks'), 2),
+        event.shapeless(Item.of(format(wood, '', 'planks'), 2),
         [
-            format(LOGS[i], 'stripped_', 'log')
+            format(wood, 'stripped_', 'log')
         ]);
-        event.shapeless(Item.of(format(LOGS[i], '', 'planks'), 2),
+        event.shapeless(Item.of(format(wood, '', 'planks'), 2),
         [
-            format(LOGS[i], 'stripped_', 'wood')
+            format(wood, 'stripped_', 'wood')
         ]);
-    }
+    });
 
     event.shapeless(Item.of('ars_nouveau:archwood_planks', 2), 
         [
@@ -195,67 +168,16 @@ ServerEvents.recipes(event => {
         A: "#c:cobblestones/normal"
     }).noMirror();
     
-    event.shaped('kubejs:compressed_cobblestone', [
-        'CCC',
-        'CCC',
-        'CCC',
-    ], {
-        C: 'minecraft:cobblestone'
-    })
-    event.shaped('6x kubejs:compressed_cobblestone_slab', [
-        'CCC'
-    ], {
-        C: 'kubejs:compressed_cobblestone'
-    });
-    event.shaped('kubejs:compressed_cobblestone', [
-        'A',
-        'A'
-    ], {
-        A: 'kubejs:compressed_cobblestone_slab'
-    });
-    event.stonecutting('2x kubejs:compressed_cobblestone_slab', 'kubejs:compressed_cobblestone');
+    
+    compressed_recipe('kubejs:compressed_cobblestone', 'minecraft:cobblestone');
+    slab_recipe('kubejs:compressed_cobblestone_slab', 'kubejs:compressed_cobblestone');
 
+    compressed_recipe('kubejs:double_compressed_cobblestone', 'kubejs:compressed_cobblestone');
+    slab_recipe('kubejs:double_compressed_cobblestone_slab', 'kubejs:double_compressed_cobblestone');
 
-    event.shaped('kubejs:double_compressed_cobblestone', [
-        'CCC',
-        'CCC',
-        'CCC',
-    ], {
-        C: 'kubejs:compressed_cobblestone'
-    });
-    event.shaped('6x kubejs:double_compressed_cobblestone_slab', [
-        'CCC'
-    ], {
-        C: 'kubejs:double_compressed_cobblestone'
-    });
-    event.shaped('kubejs:double_compressed_cobblestone', [
-        'A',
-        'A'
-    ], {
-        A: 'kubejs:double_compressed_cobblestone_slab'
-    });
-    event.stonecutting('2x kubejs:double_compressed_cobblestone_slab', 'kubejs:double_compressed_cobblestone');
-
-
-    event.shaped('kubejs:triple_compressed_cobblestone', [
-        'CCC',
-        'CCC',
-        'CCC',
-    ], {
-        C: 'kubejs:double_compressed_cobblestone'
-    });
-    event.shaped('6x kubejs:triple_compressed_cobblestone_slab', [
-        'CCC'
-    ], {
-        C: 'kubejs:triple_compressed_cobblestone'
-    });
-    event.shaped('kubejs:triple_compressed_cobblestone', [
-        'A',
-        'A'
-    ], {
-        A: 'kubejs:triple_compressed_cobblestone_slab'
-    });
-    event.stonecutting('3x kubejs:triple_compressed_cobblestone_slab', 'kubejs:triple_compressed_cobblestone');
+    compressed_recipe('kubejs:triple_compressed_cobblestone', 'kubejs:double_compressed_cobblestone');
+    slab_recipe('kubejs:triple_compressed_cobblestone_slab', 'kubejs:triple_compressed_cobblestone');
+    
 
     event.shaped('minecraft:furnace', [
         'CcC',
@@ -273,6 +195,34 @@ ServerEvents.recipes(event => {
         i: 'minecraft:iron_nugget',
         I: 'minecraft:iron_ingot'
     });
+
+    event.shaped('minecraft:chest', [
+        'HPH',
+        'PiP',
+        'PPP'
+    ], {
+        H: 'kubejs:hinge',
+        P: '#minecraft:planks',
+        i: 'minecraft:iron_nugget'
+    });
+
+    event.shaped('minecraft:ender_chest', [
+        'OPO',
+        'PCP',
+        'OPO'
+    ], {
+        O: 'minecraft:obsidian',
+        P: 'minecraft:ender_pearl',
+        C: '#minecraft:chests'
+    });
+
+    event.shapeless('minecraft:flint_and_steel', ['minecraft:flint', '#c:ingots/steel'])
+
+    compressed_recipe('kubejs:compressed_obsidian', 'minecraft:obsidian');
+    compressed_recipe('kubejs:double_compressed_obsidian', 'kubejs:compressed_obsidian');
+    compressed_recipe('kubejs:triple_compressed_obsidian', 'kubejs:double_compressed_obsidian');
+
+    
 
 });
 
