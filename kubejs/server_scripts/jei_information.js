@@ -13,9 +13,10 @@
 
 RecipeViewerEvents.addInformation('item', event => {
 	event.add('kubejs:fire_making_equipment', [
-		'Has only §1one§r usage.',
+		'Has only §cONE§r usage.',
         'Place any planks block and §2right click§r on it',
-        'With §230% chance§r it will become fire'
+        'With §230% chance§r it will become fire',
+		'Throw §dDemon\'s Dream Fruit§r to get §2Spirit Fire§r'
 	]);
 
 	event.add('kubejs:sharped_stick', [

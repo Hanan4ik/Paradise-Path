@@ -137,7 +137,7 @@
 					type: "item"
 				}
 			]
-			x: -5.5d
+			x: -6.0d
 			y: 3.5d
 		}
 		{
@@ -189,8 +189,8 @@
 				item: { count: 1, id: "minecraft:iron_ingot" }
 				type: "item"
 			}]
-			x: -1.5d
-			y: 2.0d
+			x: -2.0d
+			y: 3.0d
 		}
 		{
 			dependencies: ["09584E7E5748E33B"]
@@ -201,7 +201,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 4.0d
+			y: 5.0d
 		}
 		{
 			dependencies: ["46D2FD668BB4AB0E"]
@@ -212,7 +212,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 5.0d
+			y: 6.5d
 		}
 		{
 			dependencies: ["1A8EC03E73DD73EA"]
@@ -223,7 +223,7 @@
 				type: "item"
 			}]
 			x: -2.0d
-			y: 6.0d
+			y: 8.0d
 		}
 		{
 			dependencies: ["06617C26C3E662FB"]
@@ -233,8 +233,8 @@
 				item: { count: 1, id: "ironchest:crystal_chest" }
 				type: "item"
 			}]
-			x: -2.0d
-			y: 7.0d
+			x: -3.5d
+			y: 8.5d
 		}
 		{
 			dependencies: ["06617C26C3E662FB"]
@@ -244,8 +244,142 @@
 				item: { count: 1, id: "ironchest:obsidian_chest" }
 				type: "item"
 			}]
-			x: -1.0d
+			x: -0.5d
+			y: 8.5d
+		}
+		{
+			dependencies: [
+				"7B212E9DA0B32BA4"
+				"09584E7E5748E33B"
+			]
+			id: "04CDB6B7DB57C8EB"
+			tasks: [{
+				id: "13612BAC2BEFB225"
+				item: { count: 1, id: "minecraft:iron_pickaxe" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7B212E9DA0B32BA4"]
+			id: "1D596762CB5A6E8F"
+			tasks: [{
+				id: "58F6165116DF6D51"
+				item: { count: 1, id: "minecraft:iron_axe" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7B212E9DA0B32BA4"]
+			id: "1E22713884214A43"
+			tasks: [{
+				id: "7988E7B7891DBE5C"
+				item: { count: 1, id: "minecraft:iron_sword" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["7B212E9DA0B32BA4"]
+			id: "243F0D32F00DC7BB"
+			tasks: [{
+				id: "110B5415BD07E996"
+				item: { count: 1, id: "minecraft:shield" }
+				type: "item"
+			}]
+			x: 3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["09584E7E5748E33B"]
+			id: "6584E3956A1EF6E8"
+			tasks: [{
+				count: 4L
+				id: "31B5C9BC042E75F2"
+				item: { count: 1, id: "minecraft:leather" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: 4.5d
+		}
+		{
+			dependencies: [
+				"46D2FD668BB4AB0E"
+				"6584E3956A1EF6E8"
+			]
+			id: "72B13E42CCA377D6"
+			tasks: [{
+				id: "2F25E066651C45CB"
+				item: { count: 1, id: "sophisticatedbackpacks:backpack" }
+				type: "item"
+			}]
+			x: 0.0d
 			y: 6.0d
+		}
+		{
+			dependencies: ["04CDB6B7DB57C8EB"]
+			id: "5E3BBCC37CB5B586"
+			tasks: [{
+				count: 4L
+				id: "088D61C8588BDDC2"
+				item: { count: 1, id: "minecraft:diamond" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 3.0d
+		}
+		{
+			dependencies: ["5E3BBCC37CB5B586"]
+			id: "7C3B29888325C8AB"
+			tasks: [
+				{
+					id: "43486B97EEE6DAE8"
+					item: { count: 1, id: "minecraft:diamond_helmet" }
+					type: "item"
+				}
+				{
+					id: "0AB6A96DD057E9A9"
+					item: { count: 1, id: "minecraft:diamond_chestplate" }
+					type: "item"
+				}
+				{
+					id: "07DC65F52BC7751E"
+					item: { count: 1, id: "minecraft:diamond_leggings" }
+					type: "item"
+				}
+				{
+					id: "74976421FB368B00"
+					item: { count: 1, id: "minecraft:diamond_boots" }
+					type: "item"
+				}
+			]
+			x: 1.0d
+			y: 4.0d
+		}
+		{
+			id: "7995EDEF454AD933"
+			tasks: [{
+				id: "3597872607294C39"
+				item: { count: 1, id: "minecraft:diamond_pickaxe" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 3.0d
+		}
+		{
+			dependencies: ["04CDB6B7DB57C8EB"]
+			id: "709271EDA4A2D008"
+			tasks: [{
+				id: "53E9BD52C33EA206"
+				item: { count: 1, id: "divinerpg:raw_rupee" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 0.0d
 		}
 	]
 }
