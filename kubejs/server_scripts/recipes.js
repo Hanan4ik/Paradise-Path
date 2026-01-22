@@ -39,8 +39,8 @@ ServerEvents.recipes(event => {
 
     event.remove( {output: 'minecraft:furnace'} ); //
 
-    event.remove( {output: 'minecraft:chest'} );
-    event.remove( {output: 'minecraft:ender_chest' });
+    event.remove( {output: 'minecraft:chest'} ); //
+    event.remove( {output: 'minecraft:ender_chest' }); //
 
     event.remove( {output:'minecraft:flint_and_steel' });
     
@@ -80,7 +80,12 @@ ServerEvents.recipes(event => {
         [
             '#minecraft:crimson_stems'
         ]);
-        
+    
+    event.shapeless(Item.of('occultism:otherplanks', 2),
+        [
+            'occultism:otherworld_log'
+        ]);
+
     event.shaped('kubejs:wooden_grip', [
         'A  ',
         ' A ',
@@ -213,7 +218,7 @@ ServerEvents.recipes(event => {
     ], {
         O: 'minecraft:obsidian',
         P: 'minecraft:ender_pearl',
-        C: '#minecraft:chests'
+        C: '#c:chests'
     });
 
     event.shapeless('minecraft:flint_and_steel', ['minecraft:flint', '#c:ingots/steel'])
@@ -222,6 +227,7 @@ ServerEvents.recipes(event => {
     compressed_recipe('kubejs:double_compressed_obsidian', 'kubejs:compressed_obsidian');
     compressed_recipe('kubejs:triple_compressed_obsidian', 'kubejs:double_compressed_obsidian');
 
+    event.shapeless('kubejs:fire_making_equipment', ['kubejs:sharped_stick', 'kubejs:sharped_stick']);
     
 
 });

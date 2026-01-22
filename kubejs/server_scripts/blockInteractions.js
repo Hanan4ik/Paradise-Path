@@ -32,19 +32,20 @@ WOOD.forEach(wood => {
 
     BlockEvents.rightClicked(format(wood, '', 'planks'), e => {
         
-
-        if (!e.level.isClientSide) return; 
-        
         if (e.hand != 'MAIN_HAND') return;
         if (e.item.id != 'kubejs:fire_making_equipment') return;
 
-        const blockAbove = e.block.up;
+        let x = e.block.x;
+        let y = e.block.y + 1;
+        let z = e.block.z;
 
-        // 2. Scan for Datura items lying on top of the plank
-        // We look for entities inside the bounding box of the block ABOVE
-        let daturaEntity = e.level.getEntitiesWithin(blockAbove.boundingBox).find(entity => 
-            entity.type == 'minecraft:item' && 
-            entity.item.id == 'occultism:datura'
+        // Search for Datura in a 3x3 horizontal area
+        let daturaEntity = e.level.getEntities().find(ent => 
+            ent.type == 'minecraft:item' && 
+            ent.item.id == 'occultism:datura' &&
+            ent.x >= x - 1 && ent.x <= x + 2 &&
+            ent.z >= z - 1 && ent.z <= z + 2 &&
+            Math.abs(ent.y - y) < 1.2
         );
 
         // 3. Roll for Success
@@ -52,16 +53,14 @@ WOOD.forEach(wood => {
             
             // Logic Branch: Spirit Fire vs Normal Fire
             if (daturaEntity) {
-                // FOUND DATURA: Create Spirit Fire
-                // Note: The ID is usually 'occultism:spirit_fire' (underscore), check your mod version!
-                daturaEntity.discard(); 
-                e.block.set('occultism:spirit_fire'); 
                 
-                e.server.runCommandSilent(`playsound minecraft:item.firecharge.use block @a ${blockAbove.x} ${blockAbove.y} ${blockAbove.z} 1.0 1.0`);
+                e.block.set('occultism:spirit_fire'); 
+                daturaEntity.discard();
+                e.server.runCommandSilent(`playsound minecraft:item.firecharge.use block @a ${e.block.x} ${e.block.y} ${e.block.z} 1.0 1.0`);
             } else {
-                // NO DATURA: Create Normal Fire
+                
                 e.block.set('minecraft:fire');
-                e.server.runCommandSilent(`playsound minecraft:item.firecharge.use block @a ${blockAbove.x} ${blockAbove.y} ${blockAbove.z} 1.0 1.0`);
+                e.server.runCommandSilent(`playsound minecraft:item.firecharge.use block @a ${e.block.x} ${e.block.y} ${e.block.z} 1.0 1.0`);
             }
 
         } else {
@@ -72,5 +71,12 @@ WOOD.forEach(wood => {
         // Consume fire starter
         e.item.count--;
     });
+});
+
+BlockEvents.rightClicked('kubejs:compressed_cobblestone', e => {
+    if (e.item.id == 'minecraft:stick' && e.hand == 'MAIN_HAND') {
+        e.item.count--;
+        e.player.give('kubejs:sharped_stick');
+    }
 });
 

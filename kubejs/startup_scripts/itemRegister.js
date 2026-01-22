@@ -63,4 +63,7 @@ StartupEvents.registry('item', event => {
 
   event.create('fire_making_equipment')
   .displayName('Fire Making Equipment');
+
+  event.create('sharped_stick')
+  .displayName('Sharped Stick');
 });

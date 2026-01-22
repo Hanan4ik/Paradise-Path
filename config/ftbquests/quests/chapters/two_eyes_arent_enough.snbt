@@ -3,6 +3,9 @@
 	default_quest_shape: ""
 	filename: "two_eyes_arent_enough"
 	group: "1580B56BA7897E10"
+	icon: {
+		id: "occultism:datura"
+	}
 	id: "69D932BF3A155944"
 	order_index: 1
 	quest_links: [ ]
