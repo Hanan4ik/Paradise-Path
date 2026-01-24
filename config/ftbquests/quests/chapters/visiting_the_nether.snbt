@@ -1,0 +1,13 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "visiting_the_nether"
+	group: "0D5E284A8C5C083D"
+	icon: {
+		id: "minecraft:netherrack"
+	}
+	id: "6DF2F37BB5827EF3"
+	order_index: 0
+	quest_links: [ ]
+	quests: [ ]
+}

@@ -9,5 +9,14 @@
 	id: "69D932BF3A155944"
 	order_index: 1
 	quest_links: [ ]
-	quests: [ ]
+	quests: [{
+		id: "006617B1E677281F"
+		tasks: [{
+			id: "5C92B4578E2D3294"
+			item: { count: 1, id: "occultism:iesnium_dust" }
+			type: "item"
+		}]
+		x: -3.5d
+		y: -1.5d
+	}]
 }

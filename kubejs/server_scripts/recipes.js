@@ -42,7 +42,12 @@ ServerEvents.recipes(event => {
     event.remove( {output: 'minecraft:chest'} ); //
     event.remove( {output: 'minecraft:ender_chest' }); //
 
-    event.remove( {output:'minecraft:flint_and_steel' });
+    event.remove( {output:'minecraft:flint_and_steel' }); //
+
+    event.remove( {id: 'sophisticatedbackpacks:backpack'} );
+
+    event.remove( {output: 'ironchest:iron_chest'} );
+    event.remove( {id: 'ironchest:chests/gold_diamond_chest'} )
     
     // Adding recipies for custom items
     
@@ -229,6 +234,37 @@ ServerEvents.recipes(event => {
 
     event.shapeless('kubejs:fire_making_equipment', ['kubejs:sharped_stick', 'kubejs:sharped_stick']);
     
+    event.shaped('sophisticatedbackpacks:backpack', [
+        'SLS',
+        'SCS',
+        'LLL'
+    ], {
+        S: 'minecraft:string',
+        L: 'twilightforest:tanned_leather',
+        C: 'ironchest:iron_chest'
+    });
+
+    event.shaped('ironchest:iron_chest', [
+        'iii',
+        'iCi',
+        'iii'
+    ], {
+        i: 'minecraft:iron_ingot',
+        C: 'ironchest:copper_chest'
+    })
+
+    event.shaped('ironchest:diamond_chest', [
+        'DDD',
+        'DCD',
+        'DDD'
+    ],{
+        D: 'minecraft:diamond',
+        C: 'ironchest:gold_chest'
+    });
+
+    event.shapeless('minecraft:apple', [
+        'minecraft:stick'
+    ]);
 
 });
 

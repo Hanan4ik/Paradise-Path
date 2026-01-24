@@ -1,5 +1,16 @@
 [
   {"version":2},
-  {"recipe":"occultism:crafting/divination_rod","recipeType":"minecraft:crafting","bookmarkType":"RECIPE"},
-  {"ingredient":{"id":"kubejs:fire_making_equipment"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+  {"ingredient":{"id":"occultism:amethyst_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"modern_industrialization:lapis_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:echo_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_end_stone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:burnt_otherrock"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:powdered_obsidian"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"modern_industrialization:emerald_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_blackstone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_ice"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_blue_ice"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_packed_ice"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:crushed_calcite"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:burnt_otherstone"},"type":"item_stack","bookmarkType":"INGREDIENT"}
 ]

@@ -132,7 +132,22 @@
 		# Show entity heads on minimap
 		# Default: true
 		entity_heads: true
-		entity_icon: { }
+		entity_icon: {
+			"minecraft:pig": true
+			"ars_nouveau:drygmy": true
+			"minecraft:salmon": false
+			"ars_nouveau:whirlisprig": true
+			"minecraft:cow": true
+			"minecraft:bee": true
+			"divinerpg:jungle_bat": true
+			"minecraft:squid": true
+			"minecraft:bat": true
+			"minecraft:glow_squid": true
+			"minecraft:chicken": true
+			"minecraft:sheep": true
+			"minecraft:wolf": true
+			"ars_nouveau:starbuncle": true
+		}
 		
 		# Minimap font scaling (values not a multiple of 0.5 may look bad)
 		# Default: 0.5
