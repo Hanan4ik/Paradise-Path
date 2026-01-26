@@ -21,7 +21,37 @@ ServerEvents.recipes((event) => {
         'occultism:otherstone',
         'occultism:trader_otherrock'
     );
+
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_gold_dust'),
+        '#c:ingots/gold');
     
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_iron_dust'),
+        '#c:ingots/iron');
+    
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_diamond_dust'),
+        '#c:gems/diamond');
+    
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_silver_dust'),
+        '#c:ingots/silver');
+
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_emerald_dust'),
+        '#c:gems/emerald');
+
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:demonic_amethyst_dust'),
+        '#c:gems/amethyst');
+
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:otherstone_dust'),
+        'occultism:otherstone');
+    
+    event.recipes.occultism.crushing(
+        RecipeResult.of('kubejs:otherrock_dust'),
+        'occultism:otherrock');
     event.recipes.occultism.spirit_fire('occultism:otherworld_sapling_natural', '#minecraft:saplings');
-    event.recipes.occultism.spirit_fire('kubejs:othergold_ingot', 'minecraft:gold_ingot');
 });

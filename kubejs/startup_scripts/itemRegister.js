@@ -96,33 +96,44 @@ StartupEvents.registry('item', event => {
 
     createDemonicDust(mat);
   };
-  const createDemonicThing = (mat) => {
-    event.create(`demonic_${mat}`)
-    .displayName(`Demonic ${mat}`)
-    .tag('kubejs:demonic_materials');
-  };
   const createDemonicMetall = (mat) => {
     createDemonicDust(mat);
     createDemonicIngot(mat);
   };
 
-  createDemonicMetall('gold');
-  createDemonicMetall('iron');
-  createDemonicMetall('silver');
+  createDemonicMetall('gold'); //
+  createDemonicMetall('iron'); //
+  createDemonicMetall('silver'); //
 
-  createDemonicDust('stone');
-  createDemonicDust('rock');
-  createDemonicDust('redstone');
+  createDemonicDust('redstone'); //
+  createDemonicDust('amethyst');
 
-  createDemonicGem('diamond');
-  createDemonicGem('emerald');
-  createDemonicGem('amethyst')
+  createDemonicGem('diamond'); //
+  createDemonicGem('emerald'); //
 
-  createDemonicThing('calcite');
+  event.create(`demonic_amethyst_shard`) //
+    .displayName(`Demonic Amethyst Shard`)
+    .tag('c:gems')
+    .tag(`c:gems/demonic_amethyst`)
+    .tag('kubejs:demonic_materials')
+    .tag(`kubejs:demonic_gems`)
+    .tag(`kubejs:demonic_gems/amethyst`);
+  
 
+  event.create('otherstone_dust') //
+    .displayName('Otherstone Dust')
+    .tag('c:dusts')
+    .tag(`c:dusts/otherstone`)
+    .tag('kubejs:othermaterials')
+    .tag(`kubejs:otherdusts`)
+    .tag(`kubejs:otherdusts/otherstone`);
 
-    // Calcite
-
-    // Emerald
+  event.create('otherrock_dust') //
+    .displayName('Otherrock Dust')
+    .tag('c:dusts')
+    .tag(`c:dusts/otherrock`)
+    .tag('kubejs:othermaterials')
+    .tag(`kubejs:otherdusts`)
+    .tag(`kubejs:otherdusts/otherrock`);
   
 });

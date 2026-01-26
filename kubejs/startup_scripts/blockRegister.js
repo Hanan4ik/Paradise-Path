@@ -250,5 +250,12 @@ StartupEvents.registry('block', event => {
         .soundType('stone')
         .requiresTool(true)
         .tagBlock('minecraft:mineable/pickaxe');
-    
+
+    event.create(`demonic_calcite`)
+    .displayName(`Demonic Calcite`)
+    .soundType('calcite')
+    .requiresTool(true)
+    .tagBlock('kubejs:demonic_materials')
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagItem('kubejs:demonic_materials');
     });
