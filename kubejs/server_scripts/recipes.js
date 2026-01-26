@@ -262,5 +262,23 @@ ServerEvents.recipes(event => {
         C: 'ironchest:gold_chest'
     });
 
+    event.shaped('occultism:dark_sacrificial_bowl', [
+        'O O',
+        'OOO',
+        'S S'
+    ], {
+        O: 'occultism:otherstone',
+        S: 'minecraft:stick'
+    });
+
+    event.shaped('occultism:sacrificial_bowl', [
+        'O O',
+        'OOO',
+        'S S'
+    ], {
+        O: 'occultism:otherstone',
+        S: 'minecraft:stick'
+    });
+
 });
 

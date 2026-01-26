@@ -27,4 +27,5 @@ ServerEvents.recipes((event) => {
     );
     
     event.recipes.occultism.spirit_fire('occultism:otherworld_sapling_natural', '#minecraft:saplings');
+    event.recipes.occultism.spirit_fire('kubejs:othergold_ingot')
 });

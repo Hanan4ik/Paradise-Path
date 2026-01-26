@@ -67,33 +67,59 @@ StartupEvents.registry('item', event => {
   event.create('sharped_stick')
   .displayName('Sharped Stick');
 
-  event.create('otherstone_dust')
-  .displayName('Otherstone Dust');
-
-  event.create('otherrock_dust')
-  .displayName('Otherrock Dust');
-
-  const createOtherMaterial = (mat) => {
+  const createOtherIngot = (mat) => {
     event.create(`other${mat}_ingot`)
     .displayName(`Other${mat} Ingot`)
     .tag('c:ingots')
-    .tag(`c:ingots/other${mat}`);
-    
+    .tag(`c:ingots/other${mat}`)
+    .tag('kubejs:othermaterials')
+    .tag(`kubejs:otheringots`)
+    .tag(`kubejs:otheringots/${mat}`);
+  };
+  const createOtherDust = (mat) => {
     event.create(`other${mat}_dust`)
     .displayName(`Other${mat} Dust`)
     .tag('c:dusts')
-    .tag(`c:dusts/other${mat}`);
+    .tag(`c:dusts/other${mat}`)
+    .tag('kubejs:othermaterials')
+    .tag(`kubejs:otherdusts`)
+    .tag(`kubejs:otherdusts/${mat}`);
+  };
+  const createOtherGem = mat => {
+    event.create(`other${mat}`)
+    .displayName(`Other${mat}`)
+    .tag('c:gems')
+    .tag(`c:gems/other${mat}`)
+    .tag('kubejs:othermaterials')
+    .tag(`kubejs:othergems`)
+    .tag(`kubejs:othergems/${mat}`);
+
+    createOtherDust(mat);
+  };
+  const createOtherThing = (mat) => {
+    event.create(`other${mat}`)
+    .displayName(`Other${mat}`)
+    .tag('kubejs:othermaterials');
+  };
+  const createOtherMetall = (mat) => {
+    createOtherDust(mat);
+    createOtherIngot(mat);
   };
 
-  createOtherMaterial('gold');
-  createOtherMaterial('iron');
-  createOtherMaterial('silver');
-  
+  createOtherMetall('gold');
+  createOtherMetall('iron');
+  createOtherMetall('silver');
 
-  event.create(`otherredstone_dust`)
-    .displayName(`Otherredstone Dust`)
-    .tag('c:dusts')
-    .tag(`c:dusts/otherredstone`);
+  createOtherDust('otherstone');
+  createOtherDust('otherrock');
+  createOtherDust('redstone');
+
+  createOtherGem('diamond');
+  createOtherGem('emerald');
+  createOtherGem('amethyst')
+
+  createOtherThing('calcute');
+
 
     // Calcite
 
