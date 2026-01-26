@@ -67,58 +67,58 @@ StartupEvents.registry('item', event => {
   event.create('sharped_stick')
   .displayName('Sharped Stick');
 
-  const createOtherIngot = (mat) => {
-    event.create(`other${mat}_ingot`)
-    .displayName(`Other${mat} Ingot`)
+  const createDemonicIngot = (mat) => {
+    event.create(`demonic_${mat}_ingot`)
+    .displayName(`Demonic ${mat} Ingot`)
     .tag('c:ingots')
-    .tag(`c:ingots/other${mat}`)
-    .tag('kubejs:othermaterials')
-    .tag(`kubejs:otheringots`)
-    .tag(`kubejs:otheringots/${mat}`);
+    .tag(`c:ingots/demonic${mat}`)
+    .tag('kubejs:demonic_materials')
+    .tag(`kubejs:demonic_ingots`)
+    .tag(`kubejs:demonic_ingots/${mat}`);
   };
-  const createOtherDust = (mat) => {
-    event.create(`other${mat}_dust`)
-    .displayName(`Other${mat} Dust`)
+  const createDemonicDust = (mat) => {
+    event.create(`demonic_${mat}_dust`)
+    .displayName(`Demonic ${mat} Dust`)
     .tag('c:dusts')
-    .tag(`c:dusts/other${mat}`)
-    .tag('kubejs:othermaterials')
-    .tag(`kubejs:otherdusts`)
-    .tag(`kubejs:otherdusts/${mat}`);
+    .tag(`c:dusts/demonic_${mat}`)
+    .tag('kubejs:demonic_materials')
+    .tag(`kubejs:demonic_dusts`)
+    .tag(`kubejs:demonic_dusts/${mat}`);
   };
-  const createOtherGem = mat => {
-    event.create(`other${mat}`)
-    .displayName(`Other${mat}`)
+  const createDemonicGem = mat => {
+    event.create(`demonic_${mat}`)
+    .displayName(`Demonic ${mat}`)
     .tag('c:gems')
-    .tag(`c:gems/other${mat}`)
-    .tag('kubejs:othermaterials')
-    .tag(`kubejs:othergems`)
-    .tag(`kubejs:othergems/${mat}`);
+    .tag(`c:gems/demonic_${mat}`)
+    .tag('kubejs:demonic_materials')
+    .tag(`kubejs:demonic_gems`)
+    .tag(`kubejs:demonic_gems/${mat}`);
 
-    createOtherDust(mat);
+    createDemonicDust(mat);
   };
-  const createOtherThing = (mat) => {
-    event.create(`other${mat}`)
-    .displayName(`Other${mat}`)
-    .tag('kubejs:othermaterials');
+  const createDemonicThing = (mat) => {
+    event.create(`demonic_${mat}`)
+    .displayName(`Demonic ${mat}`)
+    .tag('kubejs:demonic_materials');
   };
-  const createOtherMetall = (mat) => {
-    createOtherDust(mat);
-    createOtherIngot(mat);
+  const createDemonicMetall = (mat) => {
+    createDemonicDust(mat);
+    createDemonicIngot(mat);
   };
 
-  createOtherMetall('gold');
-  createOtherMetall('iron');
-  createOtherMetall('silver');
+  createDemonicMetall('gold');
+  createDemonicMetall('iron');
+  createDemonicMetall('silver');
 
-  createOtherDust('otherstone');
-  createOtherDust('otherrock');
-  createOtherDust('redstone');
+  createDemonicDust('stone');
+  createDemonicDust('rock');
+  createDemonicDust('redstone');
 
-  createOtherGem('diamond');
-  createOtherGem('emerald');
-  createOtherGem('amethyst')
+  createDemonicGem('diamond');
+  createDemonicGem('emerald');
+  createDemonicGem('amethyst')
 
-  createOtherThing('calcute');
+  createDemonicThing('calcite');
 
 
     // Calcite

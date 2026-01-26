@@ -1,6 +1,5 @@
 // Visit the wiki for more info - https://kubejs.com/
 console.info('Hello, World! (Loaded server example script)');
-import { WOOD, format } from constants;
 
 // For wood 
 
@@ -47,9 +46,16 @@ ServerEvents.recipes(event => {
     event.remove( {id: 'sophisticatedbackpacks:backpack'} );
 
     event.remove( {output: 'ironchest:iron_chest'} );
-    event.remove( {id: 'ironchest:chests/gold_diamond_chest'} )
+    event.remove( {id: 'ironchest:chests/gold_diamond_chest'} );
+
+    event.remove( {id:'occultism:crafting/sacrificial_bowl'} );
+    event.remove( {id: 'occultism:crafting/dark_sacrificial_bowl'} );
     
-    // Adding recipies for custom items
+    // Adding recipes to furnace
+
+    event.smelting('kubejs:burnt_otherstone', 'occultism:otherstone');
+
+    // Adding recipes to crafting table
     
     WOOD.forEach(wood => {
 
@@ -280,5 +286,15 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stick'
     });
 
+    event.shaped('occultism:dark_sacrificial_bowl', [
+        'O O',
+        'OOO',
+        'S S'
+    ], {
+        O: 'kubejs:burnt_otherstone',
+        S: 'minecraft:stick'
+    });
+
+    
 });
 

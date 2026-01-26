@@ -15,10 +15,6 @@ ServerEvents.recipes((event) => {
         'occultism:burnt_otherrock',
         'occultism:otherstone'
     );
-    event.replaceInput({id: 'occultism:crafting/dark_sacrificial_bowl'},
-        'occultism:otherrock',
-        'kubejs:burnt_otherstone'
-    );
 
     event.recipes.occultism.spirit_trade(
         WeightedRecipeResult.of('occultism:otherrock', 1, 100),
@@ -27,5 +23,5 @@ ServerEvents.recipes((event) => {
     );
     
     event.recipes.occultism.spirit_fire('occultism:otherworld_sapling_natural', '#minecraft:saplings');
-    event.recipes.occultism.spirit_fire('kubejs:othergold_ingot')
+    event.recipes.occultism.spirit_fire('kubejs:othergold_ingot', 'minecraft:gold_ingot');
 });
