@@ -44,4 +44,23 @@ const WOOD = [
         'twilightforest:{0}transformation_{1}',
         'twilightforest:{0}mining_{1}',
         'twilightforest:{0}sorting_{1}',
-    ]
+    ];
+  
+const DYE = [
+  'white',
+  'light_gray',
+  'gray',
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'lime',
+  'green',
+  'cyan',
+  'light_blue',
+  'blue',
+  'purple',
+  'magenta',
+  'pink'
+];

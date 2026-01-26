@@ -66,4 +66,37 @@ StartupEvents.registry('item', event => {
 
   event.create('sharped_stick')
   .displayName('Sharped Stick');
+
+  event.create('otherstone_dust')
+  .displayName('Otherstone Dust');
+
+  event.create('otherrock_dust')
+  .displayName('Otherrock Dust');
+
+  const createOtherMaterial = (mat) => {
+    event.create(`other${mat}_ingot`)
+    .displayName(`Other${mat} Ingot`)
+    .tag('c:ingots')
+    .tag(`c:ingots/other${mat}`);
+    
+    event.create(`other${mat}_dust`)
+    .displayName(`Other${mat} Dust`)
+    .tag('c:dusts')
+    .tag(`c:dusts/other${mat}`);
+  };
+
+  createOtherMaterial('gold');
+  createOtherMaterial('iron');
+  createOtherMaterial('silver');
+  
+
+  event.create(`otherredstone_dust`)
+    .displayName(`Otherredstone Dust`)
+    .tag('c:dusts')
+    .tag(`c:dusts/otherredstone`);
+
+    // Calcite
+
+    // Emerald
+  
 });

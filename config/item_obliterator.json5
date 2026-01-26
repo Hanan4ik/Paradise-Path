@@ -22,7 +22,9 @@
     "ars_nouveau:archwood_chest",
     "divinerpg:bone_chest",
     "divinerpg:frosted_chest",
-    "divinerpg:present_box"
+    "divinerpg:present_box",
+    "occultism:burnt_otherstone",
+    "occultism:burnt_otherrock"
 
   ],
   // -----------------------------------------------------------

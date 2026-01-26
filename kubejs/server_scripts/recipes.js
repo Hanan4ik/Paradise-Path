@@ -262,9 +262,5 @@ ServerEvents.recipes(event => {
         C: 'ironchest:gold_chest'
     });
 
-    event.shapeless('minecraft:apple', [
-        'minecraft:stick'
-    ]);
-
 });
 

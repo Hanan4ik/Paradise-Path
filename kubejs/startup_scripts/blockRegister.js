@@ -243,5 +243,12 @@ StartupEvents.registry('block', event => {
         .hardness(120)
         .tagBlock('minecraft:mineable/pickaxe')
         .tagBlock('minecraft:needs_diamond_tool');
+
+    event.create('burnt_otherstone')
+        .displayName('Burnt Otherstone')
+        .mapColor('stone')
+        .soundType('stone')
+        .requiresTool(true)
+        .tagBlock('minecraft:mineable/pickaxe');
     
     });

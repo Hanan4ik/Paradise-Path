@@ -133,20 +133,20 @@
 		# Default: true
 		entity_heads: true
 		entity_icon: {
-			"minecraft:pig": true
-			"ars_nouveau:drygmy": true
-			"minecraft:salmon": false
+			"minecraft:sheep": true
 			"ars_nouveau:whirlisprig": true
 			"minecraft:cow": true
-			"minecraft:bee": true
-			"divinerpg:jungle_bat": true
-			"minecraft:squid": true
-			"minecraft:bat": true
-			"minecraft:glow_squid": true
-			"minecraft:chicken": true
-			"minecraft:sheep": true
-			"minecraft:wolf": true
 			"ars_nouveau:starbuncle": true
+			"minecraft:bat": true
+			"ars_nouveau:drygmy": true
+			"minecraft:pig": true
+			"minecraft:salmon": false
+			"minecraft:bee": true
+			"minecraft:chicken": true
+			"minecraft:wolf": true
+			"minecraft:squid": true
+			"divinerpg:jungle_bat": true
+			"minecraft:glow_squid": true
 		}
 		
 		# Minimap font scaling (values not a multiple of 0.5 may look bad)
