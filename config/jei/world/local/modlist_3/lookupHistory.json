@@ -1,5 +1,11 @@
 [
   {"version":1},
+  {"ingredient":{"id":"biomesoplenty:rose_quartz_chunk"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:rose_quartz"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"biomesoplenty:brimstone_fumarole"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"avaritia:singularity","components":{"avaritia:singularity_id":"avaritia:netherite"}},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:netherite_sword"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"actuallyadditions:netherite_aiot"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"draconicevolution:entity_detector"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"kubejs:burnt_otherstone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"ae2:fluix_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
@@ -93,11 +99,5 @@
   {"ingredient":{"id":"occultism:spawn_egg/foliot","components":{"minecraft:item_name":"{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherrock_trader\"}","minecraft:lore":["{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherrock_trader.tooltip\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"occultism:ritual_dummy/summon_foliot_otherrock_trader"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"occultism:spawn_egg/foliot","components":{"minecraft:item_name":"{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer\"}","minecraft:lore":["{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer.tooltip\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:stick"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:oak_log"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:ritual_dummy/summon_foliot_otherstone_trader"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:spawn_egg/wondering_trader"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:dimensional_mineshaft"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:otherstone_tablet"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:infused_lenses"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+  {"ingredient":{"id":"minecraft:stick"},"type":"item_stack","bookmarkType":"INGREDIENT"}
 ]

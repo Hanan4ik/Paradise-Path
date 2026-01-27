@@ -50,6 +50,23 @@ ServerEvents.recipes(event => {
 
     event.remove( {id:'occultism:crafting/sacrificial_bowl'} );
     event.remove( {id: 'occultism:crafting/dark_sacrificial_bowl'} );
+
+    // Modifying crafting table recipes
+
+    event.replaceInput({id:'occultism:crafting/brush'}, '#minecraft:planks', 'occultism:otherplanks');
+    event.replaceInput({output:'occultism:book_of_binding_foliot'},
+        '#c:dyes/blue',
+        'kubejs:foliot_dust');
+    event.replaceInput({output:'occultism:book_of_binding_djinni'},
+        '#c:dyes/purple',
+        'kubejs:djinni_dust');
+    event.replaceInput({output:'occultism:book_of_binding_afrit'},
+        '#c:dyes/yellow',
+        'kubejs:afrit_dust');
+    event.replaceInput({output:'occultism:book_of_binding_marid'},
+        '#c:dyes/green',
+        'kubejs:foliot_dust');
+    
     
     // Adding recipes to furnace
 
@@ -268,15 +285,6 @@ ServerEvents.recipes(event => {
         C: 'ironchest:gold_chest'
     });
 
-    event.shaped('occultism:dark_sacrificial_bowl', [
-        'O O',
-        'OOO',
-        'S S'
-    ], {
-        O: 'occultism:otherstone',
-        S: 'minecraft:stick'
-    });
-
     event.shaped('occultism:sacrificial_bowl', [
         'O O',
         'OOO',
@@ -295,6 +303,7 @@ ServerEvents.recipes(event => {
         S: 'minecraft:stick'
     });
 
-    
+    event.shapeless('kubejs:ink_bottle', ['minecraft:ink_sac', 'minecraft:glass_bottle']);
+
 });
 

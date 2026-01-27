@@ -9,14 +9,276 @@
 	id: "69D932BF3A155944"
 	order_index: 1
 	quest_links: [ ]
-	quests: [{
-		id: "006617B1E677281F"
-		tasks: [{
-			id: "5C92B4578E2D3294"
-			item: { count: 1, id: "occultism:iesnium_dust" }
-			type: "item"
-		}]
-		x: -3.5d
-		y: -1.5d
-	}]
+	quests: [
+		{
+			dependencies: ["5E3BBCC37CB5B586"]
+			icon: {
+				id: "minecraft:flint_and_steel"
+			}
+			id: "53167CC11CF0316C"
+			tasks: [
+				{
+					id: "1EF6BD36789D0909"
+					item: { count: 1, id: "minecraft:iron_ingot" }
+					type: "item"
+				}
+				{
+					id: "34A7E40749DC4446"
+					item: { count: 1, id: "minecraft:flint" }
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: -3.5d
+		}
+		{
+			dependencies: ["5E3BBCC37CB5B586"]
+			id: "7C58D23DF43BF985"
+			tasks: [
+				{
+					id: "3B161129226F87E0"
+					item: { count: 1, id: "occultism:datura_seeds" }
+					type: "item"
+				}
+				{
+					id: "2952FC91F6AF1F4F"
+					item: { count: 1, id: "occultism:datura" }
+					type: "item"
+				}
+			]
+			x: -3.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7C58D23DF43BF985"]
+			id: "7028B46B7448B61C"
+			tasks: [{
+				id: "6E2CE91BE501C72F"
+				item: { count: 1, id: "occultism:spirit_fire" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: -1.5d
+		}
+		{
+			dependencies: ["7028B46B7448B61C"]
+			id: "3E0D290A341E5A2A"
+			tasks: [{
+				id: "7A18B974140B6DBC"
+				item: { count: 1, id: "occultism:otherworld_sapling_natural" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["7028B46B7448B61C"]
+			id: "5E469E6CC4F88858"
+			tasks: [{
+				count: 16L
+				id: "24F095F053F18A12"
+				item: { count: 1, id: "occultism:otherstone" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["5E469E6CC4F88858"]
+			id: "2CE5A275786B4826"
+			tasks: [{
+				count: 5L
+				id: "2D44F0359E24DC55"
+				item: { count: 1, id: "kubejs:burnt_otherstone" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["3E0D290A341E5A2A"]
+			id: "33296E5CEC01EE17"
+			tasks: [{
+				count: 4L
+				id: "396DCDBF4D413147"
+				item: { count: 1, id: "occultism:otherworld_log" }
+				type: "item"
+			}]
+			x: 1.0d
+			y: -0.5d
+		}
+		{
+			dependencies: ["33296E5CEC01EE17"]
+			id: "7874E4ACB3ECA84F"
+			tasks: [{
+				count: 3L
+				id: "1EFBE40BA7E267FB"
+				item: { count: 1, id: "occultism:otherworld_ashes" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"5E469E6CC4F88858"
+				"7874E4ACB3ECA84F"
+			]
+			id: "0E8BB75C16DF786A"
+			tasks: [{
+				id: "2023033D5F3CF7AE"
+				item: { count: 1, id: "occultism:chalk_white" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["5E469E6CC4F88858"]
+			id: "68290F1015F5CA26"
+			tasks: [{
+				id: "6BFA72F1691433E2"
+				item: { count: 1, id: "occultism:golden_sacrificial_bowl" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["2CE5A275786B4826"]
+			icon: {
+				id: "occultism:dark_sacrificial_bowl"
+			}
+			id: "40230646CB814361"
+			tasks: [
+				{
+					id: "26E75E0B8DB7841C"
+					item: { count: 1, id: "occultism:dark_sacrificial_bowl" }
+					type: "item"
+				}
+				{
+					id: "02F8E04F8FB31FDC"
+					item: { count: 1, id: "occultism:sacrificial_bowl" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["7E7FD883994BD0C3"]
+			id: "7D849246668A8CD1"
+			tasks: [{
+				id: "4AA67313AACE86B3"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(occultism:candles)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -5.0d
+		}
+		{
+			dependencies: ["31EC1C0179987150"]
+			id: "7E7FD883994BD0C3"
+			tasks: [{
+				id: "28C7E560F34C517F"
+				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:candles)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["6A2B33D783246E27"]
+			id: "31EC1C0179987150"
+			tasks: [{
+				count: 4L
+				id: "59B17FCFE382BDC2"
+				item: { count: 1, id: "minecraft:honeycomb" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -6.5d
+		}
+		{
+			dependencies: ["353B89CBB072BDC4"]
+			id: "6A2B33D783246E27"
+			tasks: [{
+				id: "04F19039751B7D9F"
+				item: { count: 1, id: "minecraft:beehive" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -7.0d
+		}
+		{
+			id: "353B89CBB072BDC4"
+			tasks: [{
+				icon: {
+					components: {
+						"ftbquests:icon": "minecraft:textures/entity_icon/bee/bee.png"
+					}
+					id: "ftbquests:custom_icon"
+				}
+				id: "5386149685058536"
+				observe_type: 5
+				timer: 0L
+				to_observe: "minecraft:bee"
+				type: "observation"
+			}]
+			x: -1.5d
+			y: -7.0d
+		}
+		{
+			dependencies: [
+				"0E8BB75C16DF786A"
+				"40230646CB814361"
+				"7D849246668A8CD1"
+				"68290F1015F5CA26"
+			]
+			icon: {
+				id: "occultism:ritual_dummy/custom_ritual_summon"
+			}
+			id: "057BD2F71C514495"
+			tasks: [
+				{
+					id: "28233CD5E133A7DE"
+					item: { components: { "occultism:spirit_name": "Morrondrinne" }, count: 1, id: "occultism:book_of_binding_bound_foliot" }
+					type: "item"
+				}
+				{
+					id: "3A17726EF7074871"
+					item: { count: 1, id: "kubejs:foliot_dust" }
+					type: "item"
+				}
+				{
+					id: "6E49E55B75AF2609"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:storage_blocks/iron)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "2CD5EA9F90AD898F"
+					item: { count: 1, id: "occultism:spirit_attuned_gem" }
+					type: "item"
+				}
+				{
+					id: "5008EE59290BA7B3"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:storage_blocks/copper)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "2D8F3B534A74A2B2"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:storage_blocks/silver)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "24EE937BDB99BB75"
+					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:storage_blocks/gold)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+			]
+			x: 3.5d
+			y: -4.0d
+		}
+	]
 }

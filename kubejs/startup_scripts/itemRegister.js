@@ -69,7 +69,7 @@ StartupEvents.registry('item', event => {
 
   const createDemonicIngot = (mat) => {
     event.create(`demonic_${mat}_ingot`)
-    .displayName(`Demonic ${mat} Ingot`)
+    .displayName(`Demonic ${mat.charAt(0).toUpperCase() + mat.slice(1)} Ingot`)
     .tag('c:ingots')
     .tag(`c:ingots/demonic${mat}`)
     .tag('kubejs:demonic_materials')
@@ -78,7 +78,7 @@ StartupEvents.registry('item', event => {
   };
   const createDemonicDust = (mat) => {
     event.create(`demonic_${mat}_dust`)
-    .displayName(`Demonic ${mat} Dust`)
+    .displayName(`Demonic ${mat.charAt(0).toUpperCase() + mat.slice(1)} Dust`)
     .tag('c:dusts')
     .tag(`c:dusts/demonic_${mat}`)
     .tag('kubejs:demonic_materials')
@@ -87,7 +87,7 @@ StartupEvents.registry('item', event => {
   };
   const createDemonicGem = mat => {
     event.create(`demonic_${mat}`)
-    .displayName(`Demonic ${mat}`)
+    .displayName(`Demonic ${mat.charAt(0).toUpperCase() + mat.slice(1)}`)
     .tag('c:gems')
     .tag(`c:gems/demonic_${mat}`)
     .tag('kubejs:demonic_materials')
@@ -135,5 +135,20 @@ StartupEvents.registry('item', event => {
     .tag('kubejs:othermaterials')
     .tag(`kubejs:otherdusts`)
     .tag(`kubejs:otherdusts/otherrock`);
+  
+  event.create('ink_bottle')
+    .displayName('Ink Bottle')
+    .tag('c:dyes')
+    .tag('c:dyes/black');
+
+  event.create('foliot_dust').displayName('Foliot Dust');
+
+  event.create('djinni_dust').displayName('Djinni Dust');
+
+  event.create('afrit_dust').displayName('Afrit Dust');
+
+  event.create('marid_dust').displayName('Marid Dust');
+
+  event.create('twilight_activator').displayName('Twilight Activator');
   
 });

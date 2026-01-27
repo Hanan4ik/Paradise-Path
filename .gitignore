@@ -3,6 +3,8 @@ TrashSlotSaveState.json
 command_history.txt
 crash-reports/
 data/
+datapacks/
+defaultconfigs/
 downloads/
 git-add-nes.bat
 journeymap/
@@ -25,3 +27,5 @@ schematics/
 shaderpacks/
 .curseclient/
 command_history/
+servers.dat
+servers.dat_old

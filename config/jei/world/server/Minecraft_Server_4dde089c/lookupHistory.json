@@ -1,0 +1,15 @@
+[
+  {"version":1},
+  {"ingredient":{"id":"biomesoplenty:anomaly"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"divinerpg:ancient_stone_breakable"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:echo_shard"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"occultism:echo_dust"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"minecraft:sculk"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:andesite_ladder"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chisel:chisel"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chisel:bismuth/diamond_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"divinerpg:milk_stone"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"create:layered_calcite"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chisel:four/diamond_block"},"type":"item_stack","bookmarkType":"INGREDIENT"},
+  {"ingredient":{"id":"chisel:embossed/diamond_block"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+]
