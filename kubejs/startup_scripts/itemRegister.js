@@ -36,6 +36,8 @@ console.info('Hello, World! (Loaded startup example script)')
 
 StartupEvents.registry('item', event => {
   
+  
+
   // REGISTRIES FOR EARLY GAME
 
   event.create('wooden_grip')
@@ -111,6 +113,8 @@ StartupEvents.registry('item', event => {
   createDemonicGem('diamond'); //
   createDemonicGem('emerald'); //
 
+  createDemonicDust('calcite');
+
   event.create(`demonic_amethyst_shard`) //
     .displayName(`Demonic Amethyst Shard`)
     .tag('c:gems')
@@ -150,5 +154,5 @@ StartupEvents.registry('item', event => {
   event.create('marid_dust').displayName('Marid Dust');
 
   event.create('twilight_activator').displayName('Twilight Activator');
-  
+
 });

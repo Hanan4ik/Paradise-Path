@@ -16,7 +16,7 @@ WOOD.forEach(wood => {
             ent.z >= e.block.z - 1 && ent.z <= e.block.z + 2 &&
             ent.y - e.block.y < 1.2
         );
-
+        e.player.swing();
         if ((Math.random() <= 0.3 && 
         e.block.up.id != 'minecraft:obsidian' && 
         e.block.down.id != 'minecraft:obsidian' && 

@@ -43,13 +43,21 @@ ServerEvents.recipes(event => {
 
     event.remove( {output:'minecraft:flint_and_steel' }); //
 
-    event.remove( {id: 'sophisticatedbackpacks:backpack'} );
-
     event.remove( {output: 'ironchest:iron_chest'} );
     event.remove( {id: 'ironchest:chests/gold_diamond_chest'} );
 
     event.remove( {id:'occultism:crafting/sacrificial_bowl'} );
     event.remove( {id: 'occultism:crafting/dark_sacrificial_bowl'} );
+
+    event.remove({ id: 'occultism:crafting/butcher_knife' });
+    event.remove({id: 'occultism:crafting/lens_frame_alt'})
+    event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
+    event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
+    event.remove( {id: 'occultism:crafting/chalk_purple_impure'} );
+
+    event.remove( {id: 'occultism:otherstone_pedestal'} );
+    event.remove( {id: 'occultism:storage_controller_base'} );
+    event.remove( {id: 'occultism:storage_controller'} );
 
     // Modifying crafting table recipes
 
@@ -66,8 +74,21 @@ ServerEvents.recipes(event => {
     event.replaceInput({output:'occultism:book_of_binding_marid'},
         '#c:dyes/green',
         'kubejs:foliot_dust');
-    
-    
+    event.replaceInput({id: 'occultism:crafting/lens_frame'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot');
+    event.replaceInput({id: 'occultism:crafting/lenses'}, '#c:glass_panes',
+        'minecraft:purple_stained_glass_pane'
+    );
+    event.replaceInput( {id: 'occultism:crafting/chalk_light_gray_impure'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot'
+    );
+    event.replaceInput( {id: 'occultism:crafting/chalk_light_gray_impure'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot'
+    );
+    event.replaceInput( {id: 'occultism:crafting/chalk_light_gray_impure'}, '#c:dusts/calcute',
+        'kubejs:demonic_calcite_dust'
+    );
+
     // Adding recipes to furnace
 
     event.smelting('kubejs:burnt_otherstone', 'occultism:otherstone');
@@ -256,16 +277,6 @@ ServerEvents.recipes(event => {
     compressed_recipe('kubejs:triple_compressed_obsidian', 'kubejs:double_compressed_obsidian');
 
     event.shapeless('kubejs:fire_making_equipment', ['kubejs:sharped_stick', 'kubejs:sharped_stick']);
-    
-    event.shaped('sophisticatedbackpacks:backpack', [
-        'SLS',
-        'SCS',
-        'LLL'
-    ], {
-        S: 'minecraft:string',
-        L: 'twilightforest:tanned_leather',
-        C: 'ironchest:iron_chest'
-    });
 
     event.shaped('ironchest:iron_chest', [
         'iii',
@@ -304,6 +315,21 @@ ServerEvents.recipes(event => {
     });
 
     event.shapeless('kubejs:ink_bottle', ['minecraft:ink_sac', 'minecraft:glass_bottle']);
+
+    event.shaped('occultism:butcher_knife', [
+        'IIS',
+        'IIS',
+        '  S'
+    ], {
+        I: '#c:ingots/iron',
+        S: '#c:rods/wooden'
+    });
+
+    event.shapeless('occultism:chalk_yellow_impure', [
+        'occultism:chalk_white_impure',
+        '8x kubejs:demonic_gold_dust'
+    ]);
+    
 
 });
 

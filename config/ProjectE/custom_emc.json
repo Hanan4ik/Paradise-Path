@@ -1,4 +1,21 @@
 {
   "comment": "Use the in-game commands to edit this file",
-  "entries": []
+  "entries": [
+    {
+      "id": "avaritia:neutron_pile",
+      "emc": 100
+    },
+    {
+      "id": "avaritia:blaze_cube",
+      "emc": 30568
+    },
+    {
+      "id": "minecraft:totem_of_undying",
+      "emc": 1000
+    },
+    {
+      "id": "minecraft:bedrock",
+      "emc": 10
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 console.log('STARTING EDITING TAGS');
 
 ServerEvents.tags('item', e => {
-    e.remove('twilightforest:portal/activator', 'minecraft:diamond');
+    e.remove('twilightforest:portal/activator', '#c:gems/diamond');
 
     e.add('c:compressable', 'minecraft:cobblestone');
     e.add('twilightforest:portal/activator', 'kubejs:twilight_activator');

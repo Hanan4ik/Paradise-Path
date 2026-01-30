@@ -235,6 +235,7 @@
 				"40230646CB814361"
 				"7D849246668A8CD1"
 				"68290F1015F5CA26"
+				"61E5E6CC7B7D5C04"
 			]
 			icon: {
 				id: "occultism:ritual_dummy/custom_ritual_summon"
@@ -279,6 +280,51 @@
 			]
 			x: 3.5d
 			y: -4.0d
+		}
+		{
+			id: "51424FF22B1ADECE"
+			tasks: [{
+				icon: {
+					components: {
+						"ftbquests:icon": "ftblibrary:textures/faces/minecraft/chicken.png"
+					}
+					id: "ftbquests:custom_icon"
+				}
+				id: "1C5036B30A0E75D1"
+				observe_type: 0
+				timer: 0L
+				to_observe: "minecraft:chicken"
+				type: "observation"
+			}]
+			x: -3.5d
+			y: 1.0d
+		}
+		{
+			dependencies: ["51424FF22B1ADECE"]
+			id: "65CB5DD0EDB36B1F"
+			tasks: [{
+				count: 2L
+				id: "00565757FB040AC8"
+				item: { count: 1, id: "minecraft:feather" }
+				type: "item"
+			}]
+			x: -1.5d
+			y: 1.0d
+		}
+		{
+			dependencies: [
+				"65CB5DD0EDB36B1F"
+				"7028B46B7448B61C"
+			]
+			id: "177B9D90C04D7612"
+			tasks: [{
+				count: 2L
+				id: "61E5E6CC7B7D5C04"
+				item: { count: 1, id: "occultism:awakened_feather" }
+				type: "item"
+			}]
+			x: 0.0d
+			y: 1.0d
 		}
 	]
 }

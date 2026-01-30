@@ -88,76 +88,6 @@ logFoundExploits = true
 			#Determines whether this Recipe Type Mapper is enabled.
 			enabled = true
 
-		#Maps Mekanism sawmill recipes. (Disabled by default, due to causing various EMC values to be removed pertaining to charcoal/wood)
-		[mappers.Crafting-Mapper.Mekanism-Sawing]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
-
-		#Maps Mekanism rotary condensentrator recipes.
-		[mappers.Crafting-Mapper.Mekanism-Rotary]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism pressurized reaction recipes. (Disabled by default)
-		[mappers.Crafting-Mapper.Mekanism-PRC]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = false
-
-		#Maps Mekanism Machine recipes that go from item to item. (Crushing, Enriching, Smelting)
-		[mappers.Crafting-Mapper.Mekanism-Item-To-Item]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism item stack to chemical recipes. (Chemical conversion, Oxidizing, Pigment Extracting)
-		[mappers.Crafting-Mapper.Mekanism-I2C]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism Machine recipes that go from item, chemical to item. (Compressing, Purifying, Injecting, Metallurgic Infusing, Painting, Nucleosynthesizing)
-		[mappers.Crafting-Mapper.Mekanism-IC2I]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism evaporating recipes.
-		[mappers.Crafting-Mapper.Mekanism-Evaporating]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism washing recipes.
-		[mappers.Crafting-Mapper.Mekanism-Washing]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism electrolytic separator recipes.
-		[mappers.Crafting-Mapper.Mekanism-Electrolysis]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism combiner recipes.
-		[mappers.Crafting-Mapper.Mekanism-Combiner]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism activating and centrifuging recipes.
-		[mappers.Crafting-Mapper.Mekanism-C2C]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism dissolution recipes.
-		[mappers.Crafting-Mapper.Mekanism-Dissolution]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism crystallizing recipes.
-		[mappers.Crafting-Mapper.Mekanism-Crystallizer]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
-		#Maps Mekanism chemical infuser and pigment mixer recipes.
-		[mappers.Crafting-Mapper.Mekanism-CC2C]
-			#Determines whether this Recipe Type Mapper is enabled.
-			enabled = true
-
 	#Set EMC=0 for everything in the c:raw_materials tag.
 	[mappers.Raw-Ore-Blacklist-Mapper]
 		#Determines whether this EMC Mapper is enabled.
@@ -175,11 +105,6 @@ logFoundExploits = true
 
 	#Adds back and forth conversions of objects and their Tag variant. (EMC values assigned to tags will not behave properly if this mapper is disabled)
 	[mappers.Tag-Mapper]
-		#Determines whether this EMC Mapper is enabled.
-		enabled = true
-
-	#Registers EMC values for Avaritia mod items (neutron pile, totem, bedrock etc.)
-	[mappers.avaritia_emc_mapper]
 		#Determines whether this EMC Mapper is enabled.
 		enabled = true
 
@@ -286,10 +211,5 @@ logFoundExploits = true
 
 	#Increases the EMC value of maps that have had their range extended.
 	[processors.Map-Extension-Processor]
-		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
-		enabled = true
-
-	#Increases the EMC value of any Mekanism items by the value of the stored or installed contents
-	[processors.Mek-Contents-Processor]
 		#Determines whether this Data Component Processor is enabled and can adjust the EMC value of items.
 		enabled = true
