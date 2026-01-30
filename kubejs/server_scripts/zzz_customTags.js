@@ -2,6 +2,7 @@ console.log('STARTING EDITING TAGS');
 
 ServerEvents.tags('item', e => {
     e.remove('twilightforest:portal/activator', '#c:gems/diamond');
+    e.remove('occultism:drop_from/possessed_endermite', 'minecraft:ender_eye');
 
     e.add('c:compressable', 'minecraft:cobblestone');
     e.add('twilightforest:portal/activator', 'kubejs:twilight_activator');

@@ -53,11 +53,12 @@ ServerEvents.recipes(event => {
     event.remove({id: 'occultism:crafting/lens_frame_alt'})
     event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
     event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
-    event.remove( {id: 'occultism:crafting/chalk_purple_impure'} );
+    // event.remove( {id: 'occultism:crafting/chalk_purple_impure'} );
 
     event.remove( {id: 'occultism:otherstone_pedestal'} );
     event.remove( {id: 'occultism:storage_controller_base'} );
     event.remove( {id: 'occultism:storage_controller'} );
+    event.remove( {id: 'occultism:crafting/chalk_light_gray_impure'} );
 
     // Modifying crafting table recipes
 
@@ -73,7 +74,7 @@ ServerEvents.recipes(event => {
         'kubejs:afrit_dust');
     event.replaceInput({output:'occultism:book_of_binding_marid'},
         '#c:dyes/green',
-        'kubejs:foliot_dust');
+        'kubejs:marid_dust');
     event.replaceInput({id: 'occultism:crafting/lens_frame'}, '#c:ingots/silver',
         'kubejs:demonic_silver_ingot');
     event.replaceInput({id: 'occultism:crafting/lenses'}, '#c:glass_panes',
@@ -328,6 +329,12 @@ ServerEvents.recipes(event => {
     event.shapeless('occultism:chalk_yellow_impure', [
         'occultism:chalk_white_impure',
         '8x kubejs:demonic_gold_dust'
+    ]);
+    event.shapeless('occultism:chalk_light_gray_impure', [
+        'occultism:chalk_white_impure',
+        'kubejs:demonic_silver_dust',
+        'kubejs:demonic_calcite_dust',
+        'kubejs:demonic_iron_dust'
     ]);
     
 

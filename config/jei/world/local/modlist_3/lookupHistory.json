@@ -1,5 +1,6 @@
 [
   {"version":1},
+  {"ingredient":{"id":"kubejs:fire_making_equipment"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"biomesoplenty:rose_quartz_chunk"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"create:rose_quartz"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"biomesoplenty:brimstone_fumarole"},"type":"item_stack","bookmarkType":"INGREDIENT"},
@@ -98,6 +99,5 @@
   {"ingredient":{"id":"occultism:ritual_dummy/summon_djinni_gambler"},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"occultism:spawn_egg/foliot","components":{"minecraft:item_name":"{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherrock_trader\"}","minecraft:lore":["{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherrock_trader.tooltip\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
   {"ingredient":{"id":"occultism:ritual_dummy/summon_foliot_otherrock_trader"},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"occultism:spawn_egg/foliot","components":{"minecraft:item_name":"{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer\"}","minecraft:lore":["{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer.tooltip\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"},
-  {"ingredient":{"id":"minecraft:stick"},"type":"item_stack","bookmarkType":"INGREDIENT"}
+  {"ingredient":{"id":"occultism:spawn_egg/foliot","components":{"minecraft:item_name":"{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer\"}","minecraft:lore":["{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_crystallizer.tooltip\"}"]}},"type":"item_stack","bookmarkType":"INGREDIENT"}
 ]

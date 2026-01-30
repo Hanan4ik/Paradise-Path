@@ -142,7 +142,7 @@ ServerEvents.recipes((event) => {
         ],
         'occultism:book_of_binding_bound_foliot',
         'occultism:craft_foliot'
-    ).dummy("kubejs:ritual_dummy/ender_satchel");
+    ).dummy("kubejs:ritual_dummy/craft_ender_satchel");
 
     event.recipes.occultism.ritual(
         'occultism:ritual_satchel_t1',
