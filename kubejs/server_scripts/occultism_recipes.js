@@ -152,14 +152,32 @@ ServerEvents.recipes((event) => {
     event.remove( {id: 'occultism:ritual/summon_afrit_crusher'} );
     event.remove( {id: 'occultism:ritual/summon_marid_crusher'} );
 
+    event.remove( {id: 'occultism:ritual/summon_foliot_smelter'} );
+    event.remove( {id: 'occultism:ritual/summon_djinni_smelter'} );
+    event.remove( {id: 'occultism:ritual/summon_afrit_smelter'} );
+    event.remove( {id: 'occultism:ritual/summon_marid_smelter'} );
+
+    event.remove( {id: 'occultism:ritual/summon_djinni_crystallizer'} );
+    event.remove( {id: 'occultism:ritual/summon_afrit_crystallizer'} );
+    event.remove( {id: 'occultism:ritual/summon_marid_crystallizer'} );
+
+
     event.remove( {id: 'occultism:ritual/summon_otherstone_trader'} );
     event.remove( {id: 'occultism:ritual/summon_foliot_otherrock_trader'} );
 
+    event.remove( {id: 'occultism:ritual/summon_demonic_wife'} );
+    event.remove( {id: 'occultism:ritual/summon_demonic_husband'} );
+
+    event.remove( {id: 'occultism:ritual/summon_foliot_lumberjack'} );
+    event.remove( {id: 'occultism:ritual/summon_foliot_farmer'} );
+    event.remove( {id: 'occultism:ritual/summon_foliot_otherstone_trader'} );
+    event.remove( {id: 'occultism:ritual/summon_foliot_sapling_trader'} );
+
     // Disabled rituals
-    event.remove( {id: 'occultism:summon_foliot_crystallizer'} );
-    event.remove( {id: 'occultism:summon_foliot_otherrock_trader'} );
-    event.remove( {id: 'occultism:summon_foliot_transporter'} );
-    
+    event.remove( {id: 'occultism:ritual/summon_foliot_crystallizer'} );
+    event.remove( {id: 'occultism:ritual/summon_foliot_otherrock_trader'} );
+    event.remove( {id: 'occultism:ritual/summon_foliot_transporter'} );
+
     
     event.replaceInput({input: 'occultism:burnt_otherstone'},
         'occultism:burnt_otherstone',
@@ -226,6 +244,8 @@ ServerEvents.recipes((event) => {
     event.recipes.occultism.spirit_fire('kubejs:marid_dust', '#c:dyes/green');
     
     // Chapter stages
+
+    // Crusher Foliot
     occultismSpiritFoliot('crush', [
         {'item': 'kubejs:foliot_dust'},
         {'item': 'occultism:spirit_attuned_gem'},
@@ -235,6 +255,7 @@ ServerEvents.recipes((event) => {
         {'tag': 'c:storage_blocks/gold'}
     ]);
     
+    // Djinni Crystallizer
     occultismSpiritDjinni('crystal', [
         {'item': 'kubejs:djinni_dust'},
         {'item': 'occultism:spirit_attuned_gem'},
@@ -244,12 +265,14 @@ ServerEvents.recipes((event) => {
         {'tag': 'c:dusts/demonic_gold'}
     ]);
 
+    // Afrit Crystallizer
     event.custom(
         {
             "type": "occultism:ritual",
             "activation_item": {
                 "item": "occultism:book_of_binding_bound_afrit"
             },
+            'spirit_max_age':1800,
             "duration": 180,
             "entity_to_summon": "occultism:afrit",
             "ingredients": [
@@ -284,8 +307,232 @@ ServerEvents.recipes((event) => {
             "spirit_max_age": 3600
         }
     ).id('ritual/summon_otherrock_trader');
-    
 
+    // Crusher summon
+    // Foliot Crusher is chapter ritual
+    occultismSpiritDjinni('crush', [
+        {'item': 'kubejs:djinni_dust'},
+        {'item': 'occultism:spirit_attuned_gem'},
+        {'item': 'kubejs:demonic_diamond_dust'},
+        {'item': 'kubejs:demonic_iron_dust'},
+        {'item': 'kubejs:demonic_gold_dust'},
+        {'item': 'kubejs:demonic_copper_dust'}
+    ]);
+    console.warn('No afrit crusher');
+    console.warn('No marid crusher');
+
+    // Smelter summon
+    occultismSpiritFoliot('smelt', [
+        {'item': 'minecraft:furnace'},
+        {'item': 'minecraft:campfire'},
+        {'item': 'minecraft:blast_furnace'},
+        {'tag': 'kubejs:demonic_dusts'}
+    ]);
+    
+    occultismSpiritDjinni('smelt', [
+        {'item': 'minecraft:furnace'},
+        {'item': 'minecraft:campfire'},
+        {'item': 'minecraft:blast_furnace'},
+        {'tag': 'kubejs:demonic_gems'}
+    ]);
+    console.warn('No afrit smelter');
+    console.warn('No marid smelter');
+
+
+    // Crystallizer summon
+    // Foliot is disabled
+    // Djinni is chapter ritual
+    console.warn('No afrit crystallizer');
+    console.warn('No marid crystallizer');
+
+    // Wife summon
+    event.custom(
+    {
+        "type": "occultism:ritual",
+        "activation_item": {
+            "item": "occultism:book_of_binding_bound_djinni"
+        },
+        "duration": 120,
+        "entity_to_sacrifice": {
+            "display_name": "ritual.occultism.sacrifice.chicken",
+            "tag": "c:chickens"
+        },
+        "entity_to_summon": "occultism:demonic_wife",
+        "ingredients": [
+            {"item": "minecraft:smoker"},
+            {"tag": "kubejs:demonic_gems"},
+            {"item": "kubejs:djinni_dust"},
+            {"tag": "c:foods"},
+            {"item": "minecraft:diamond_sword"},
+            {'tag': 'c:dyes/pink'}
+        ],
+        "pentacle_id": "occultism:summon_djinni",
+        "result": {
+            "components": {
+            "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.summon_demonic_wife\"}",
+            "minecraft:lore": [
+                "{\"translate\":\"item.occultism.ritual_dummy.summon_demonic_wife.tooltip\"}"
+            ]
+            },
+            "count": 1,
+            "id": "occultism:spawn_egg/demonic_wife"
+        },
+        "ritual_dummy": {
+            "count": 1,
+            "id": "occultism:ritual_dummy/summon_demonic_wife"
+        },
+        "ritual_type": "occultism:summon_tamed"
+    }
+    );
+    // Husband summon
+    event.custom(
+    {
+        "type": "occultism:ritual",
+        "activation_item": {
+            "item": "occultism:book_of_binding_bound_djinni"
+        },
+        "duration": 120,
+        "entity_to_sacrifice": {
+            "display_name": "ritual.occultism.sacrifice.chicken",
+            "tag": "c:chickens"
+        },
+        "entity_to_summon": "occultism:demonic_husband",
+        "ingredients": [
+            {"item": "minecraft:smoker"},
+            {"tag": "kubejs:demonic_gems"},
+            {"item": "kubejs:djinni_dust"},
+            {"tag": "c:foods"},
+            {"item": "minecraft:diamond_sword"},
+            {'tag': 'c:dyes/blue'}
+        ],
+        "pentacle_id": "occultism:summon_djinni",
+        "result": {
+            "components": {
+            "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.summon_demonic_husband\"}",
+            "minecraft:lore": [
+                "{\"translate\":\"item.occultism.ritual_dummy.summon_demonic_husband.tooltip\"}"
+            ]
+            },
+            "count": 1,
+            "id": "occultism:spawn_egg/demonic_husband"
+        },
+        "ritual_dummy": {
+            "count": 1,
+            "id": "occultism:ritual_dummy/summon_demonic_husband"
+        },
+        "ritual_type": "occultism:summon_tamed"
+    }
+    );
+
+    // Lumberjack
+    event.custom(
+    {
+        "type": "occultism:ritual",
+        "activation_item": {
+            "item": "occultism:book_of_binding_bound_djinni"
+        },
+        "duration": 60,
+        "entity_to_summon": "occultism:djinni",
+        "ingredients": [
+            {"item": "occultism:otherworld_sapling"},
+            {"item": "occultism:otherworld_sapling"},
+            {"item": "occultism:otherworld_sapling"},
+            {"item": "occultism:otherworld_sapling"},
+            {"item": "minecraft:diamond_axe"}
+        ],
+        "pentacle_id": "occultism:summon_djinni",
+        "result": {
+            "count": 1,
+            "id": "occultism:book_of_calling_foliot_lumberjack"
+        },
+        "ritual_dummy": {
+            "count": 1,
+            "id": "occultism:ritual_dummy/summon_foliot_lumberjack"
+        },
+        "ritual_type": "occultism:summon_spirit_with_job",
+        "spirit_job_type": "occultism:lumberjack"
+    }
+    );
+    // Farmer
+    event.custom(
+        {
+  "type": "occultism:ritual",
+  "activation_item": {
+    "item": "occultism:book_of_binding_bound_djinni"
+  },
+  "duration": 60,
+  "entity_to_summon": "occultism:djinni",
+  "ingredients": [
+    {
+      "item": "occultism:otherworld_essence"
+    },
+    {
+      "item": "minecraft:wheat"
+    },
+    {
+      "item": "minecraft:carrot"
+    },
+    {
+      "item": "minecraft:potato"
+    },
+    {
+      "item": "minecraft:diamond_hoe"
+    }
+  ],
+  "pentacle_id": "occultism:summon_djinni",
+  "result": {
+    "count": 1,
+    "id": "occultism:book_of_calling_foliot_farmer"
+  },
+  "ritual_dummy": {
+    "count": 1,
+    "id": "occultism:ritual_dummy/summon_foliot_farmer"
+  },
+  "ritual_type": "occultism:summon_spirit_with_job",
+  "spirit_job_type": "occultism:farmer"
+}
+    );
+
+    // Otherstone trader
+    event.custom(
+        {
+  "type": "occultism:ritual",
+  "activation_item": {
+    "item": "occultism:book_of_binding_bound_djinni"
+  },
+  "duration": 60,
+  "entity_to_summon": "occultism:djinni",
+  "entity_to_sacrifice": {
+            "display_name": "ritual.occultism.sacrifice.humans",
+            "tag": "c:villagers"
+        },
+  "ingredients": [
+    {"item": "occultism:otherstone"},
+    {"item": "minecraft:granite"},
+    {"item": "minecraft:diorite"},
+    {"item": "minecraft:andesite"},
+    {'item': 'kubejs:demonic_iron_ingot'}
+  ],
+  "pentacle_id": "occultism:summon_djinni",
+  "result": {
+    "components": {
+      "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherstone_trader\"}",
+      "minecraft:lore": [
+        "{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_otherstone_trader.tooltip\"}"
+      ]
+    },
+    "count": 1,
+    "id": "occultism:spawn_egg/djinni"
+  },
+  "ritual_dummy": {
+    "count": 1,
+    "id": "occultism:ritual_dummy/summon_foliot_otherstone_trader"
+  },
+  "ritual_type": "occultism:summon_spirit_with_job",
+  "spirit_job_type": "occultism:trader_otherstone",
+  "spirit_max_age": 3600
+    }
+    );
     // Ritual adjustments
     event.recipes.occultism.ritual(
         'occultism:satchel', // Result

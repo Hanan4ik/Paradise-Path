@@ -302,7 +302,7 @@ StartupEvents.registry('block', event => {
     .hardness(5)
     .tagBlock('minecraft:mineable/pickaxe')
     .tagBlock('c:storage_blocks')
-    .tagBlock('c:storage_blocks/demonic_ametyst')
+    .tagBlock('c:storage_blocks/demonic_amethyst')
     .tagItem('c:storage_blocks')
     .tagItem('c:storage_blocks/demonic_amethyst');
 

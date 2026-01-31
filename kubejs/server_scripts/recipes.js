@@ -52,7 +52,7 @@ ServerEvents.recipes(event => {
     event.remove({ id: 'occultism:crafting/butcher_knife' });
     event.remove({id: 'occultism:crafting/lens_frame_alt'})
     event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
-    event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
+    event.remove( {id: 'occultism:crafting/chalk_lime_impure'} );
     // event.remove( {id: 'occultism:crafting/chalk_purple_impure'} );
 
     event.remove( {id: 'occultism:otherstone_pedestal'} );
@@ -336,6 +336,13 @@ ServerEvents.recipes(event => {
         'kubejs:demonic_calcite_dust',
         'kubejs:demonic_iron_dust'
     ]);
+    event.shapeless('occultism:chalk_lime_impure', [
+        'occultism:chalk_light_gray_impure',
+        'kubejs:demonic_emerald_dust',
+        'occultism:research_fragment_dust',
+        'minecraft:trial_key',
+        'kubejs:djinni_dust'
+    ])
     
 
 });
