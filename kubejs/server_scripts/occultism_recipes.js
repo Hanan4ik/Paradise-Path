@@ -533,6 +533,13 @@ ServerEvents.recipes((event) => {
   "spirit_max_age": 3600
     }
     );
+
+    console.warn('No otherworld sapling trader');
+    console.warn('No foliot janitor. Note: one of ingreds is actually additions ranged collector');
+    console.warn('No foliot transporter');
+    console.warn('No gambler');
+    console.warn('No djinni machine operator')
+
     // Ritual adjustments
     event.recipes.occultism.ritual(
         'occultism:satchel', // Result
