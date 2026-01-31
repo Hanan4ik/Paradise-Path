@@ -258,4 +258,89 @@ StartupEvents.registry('block', event => {
     .tagBlock('kubejs:demonic_materials')
     .tagBlock('minecraft:mineable/pickaxe')
     .tagItem('kubejs:demonic_materials');
+
+    event.create('demonic_iron_block')
+    .displayName('Demonic Iron Block')
+    .soundType('metal')
+    .hardness(5)
+    .requiresTool(true)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_stone_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_iron')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_iron');
+
+    event.create('demonic_gold_block')
+    .displayName('Demonic Gold Block')
+    .soundType('metal')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_iron_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_gold')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_gold');
+
+    event.create('demonic_silver_block')
+    .displayName('Demonic Silver Block')
+    .soundType('metal')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_iron_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_silver')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_silver');
+
+    event.create('demonic_ametyst_block')
+    .displayName('Demonic Amethyst Block')
+    .soundType('amethyst')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_ametyst')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_amethyst');
+
+    event.create('demonic_emerald_block')
+    .displayName('Demonic Emerald Block')
+    .soundType('metal')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_iron_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_diamond')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_diamond');
+
+    event.create('demonic_diamond_block')
+    .displayName('Demonic Diamond Block')
+    .soundType('metal')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_iron_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_emerald')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_emerald');
+
+    event.create('demonic_copper_block')
+    .displayName('Demonic Copper Block')
+    .soundType('metal')
+    .requiresTool(true)
+    .hardness(5)
+    .tagBlock('minecraft:mineable/pickaxe')
+    .tagBlock('minecraft:needs_stone_tool')
+    .tagBlock('c:storage_blocks')
+    .tagBlock('c:storage_blocks/demonic_copper')
+    .tagItem('c:storage_blocks')
+    .tagItem('c:storage_blocks/demonic_copper');
     });
+
+    

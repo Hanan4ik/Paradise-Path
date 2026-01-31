@@ -181,8 +181,8 @@
 			dependencies: ["31EC1C0179987150"]
 			id: "7E7FD883994BD0C3"
 			tasks: [{
-				id: "28C7E560F34C517F"
-				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(minecraft:candles)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+				id: "0775DBF50FDC1ACD"
+				item: { count: 1, id: "minecraft:candle" }
 				type: "item"
 			}]
 			x: 1.5d

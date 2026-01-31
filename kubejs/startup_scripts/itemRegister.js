@@ -106,6 +106,7 @@ StartupEvents.registry('item', event => {
   createDemonicMetall('gold'); //
   createDemonicMetall('iron'); //
   createDemonicMetall('silver'); //
+  createDemonicMetall('copper'); // 
 
   createDemonicDust('redstone'); //
   createDemonicDust('amethyst');

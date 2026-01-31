@@ -64,3 +64,12 @@ const DYE = [
   'magenta',
   'pink'
 ];
+
+const jobMap = {
+  crush: 'crusher',
+  crystal: 'crystallizer',
+  smelt: 'smelter',
+  cleaner: 'cleaner',
+  farmer: 'farmer',
+  lumberjack: 'lumberjack'
+}
