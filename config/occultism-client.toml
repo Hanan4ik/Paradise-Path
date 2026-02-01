@@ -124,7 +124,7 @@
 	# Range: > 1
 	divinationRodScanRange = 129
 	#Disables the sound played when a spirit fire successfully crafted an item.
-	disableSpiritFireSuccessSound = false
+	disableSpiritFireSuccessSound = true
 	#How many pentagrams to show at one time on the bowl information
 	# Default: 3
 	# Range: > 1

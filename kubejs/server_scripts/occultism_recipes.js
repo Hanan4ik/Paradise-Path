@@ -173,6 +173,12 @@ ServerEvents.recipes((event) => {
     event.remove( {id: 'occultism:ritual/summon_foliot_otherstone_trader'} );
     event.remove( {id: 'occultism:ritual/summon_foliot_sapling_trader'} );
 
+    event.remove( {id: 'occultism:ritual/summon_unbound_afrit'} );
+
+    console.warn('No unbound marid ritual');
+    event.remove( {id: 'occultism:ritual/summon_unbound_marid'} );
+
+
     // Disabled rituals
     event.remove( {id: 'occultism:ritual/summon_foliot_crystallizer'} );
     event.remove( {id: 'occultism:ritual/summon_foliot_otherrock_trader'} );
@@ -531,6 +537,53 @@ ServerEvents.recipes((event) => {
   "ritual_type": "occultism:summon_spirit_with_job",
   "spirit_job_type": "occultism:trader_otherstone",
   "spirit_max_age": 3600
+    }
+    );
+
+    // Unbound afrit
+    event.custom(
+        {
+        "type": "occultism:ritual",
+        "activation_item": {
+            "item": "occultism:book_of_binding_bound_afrit"
+        },
+        "duration": 150,
+        "entity_to_sacrifice": {
+            "display_name": "ritual.occultism.sacrifice.cows",
+            "tag": "c:cows"
+        },
+        "entity_to_summon": "occultism:afrit_wild",
+        "ingredients": [
+            {
+            "item": "kubejs:afrit_dust"
+            },
+            {
+            "tag": "c:storage_blocks/copper"
+            },
+            {
+            "tag": "c:tools/igniter"
+            },
+            {
+            "tag": "c:gunpowders"
+            },
+            {'tag': 'c:drinks/ominous'}
+        ],
+        "pentacle_id": "occultism:summon_unbound_afrit",
+        "result": {
+            "components": {
+            "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.summon_unbound_afrit\"}",
+            "minecraft:lore": [
+                "{\"translate\":\"item.occultism.ritual_dummy.summon_unbound_afrit.tooltip\"}"
+            ]
+            },
+            "count": 1,
+            "id": "occultism:afrit_essence"
+        },
+        "ritual_dummy": {
+            "count": 1,
+            "id": "occultism:ritual_dummy/summon_unbound_afrit"
+        },
+        "ritual_type": "occultism:summon"
     }
     );
 

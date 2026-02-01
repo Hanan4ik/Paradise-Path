@@ -64,7 +64,9 @@ StartupEvents.registry('item', event => {
   .displayName('Hinge');
 
   event.create('fire_making_equipment')
-  .displayName('Fire Making Equipment');
+  .displayName('Fire Making Equipment')
+  .tag('c:tools')
+  .tag('c:tools/igniter');
 
   event.create('sharped_stick')
   .displayName('Sharped Stick');

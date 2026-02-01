@@ -76,7 +76,7 @@
 	#The percentage of Wondering Trader replace the Wandering Trader when spawn.
 	# Default: 5
 	# Range: 0 ~ 100
-	traderWonderingChance = 5
+	traderWonderingChance = 0
 	#The time in ticks it takes to cast the day time ritual.
 	# Default: 100
 	# Range: > 0
@@ -126,11 +126,11 @@
 		#The multiplier to each recipe's time for Djinni Crusher
 		# Default: 1.0
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 1.0
+		timeMultiplier = 0.75
 		#The multiplier to each recipe's output count for Djinni Crusher
 		# Default: 1.5
 		# Range: 0.0 ~ 2.147483647E9
-		outputMultiplier = 1.5
+		outputMultiplier = 1.0
 		#Max number of recipes that Djinni Crusher make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -168,7 +168,7 @@
 		#The multiplier to each recipe's output count for Marid Crusher
 		# Default: 3.0
 		# Range: 0.0 ~ 2.147483647E9
-		outputMultiplier = 3.0
+		outputMultiplier = 1.0
 		#Max number of recipes that Marid Crusher make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -202,11 +202,11 @@
 		#The multiplier to each recipe's time for Djinni Crystallizer
 		# Default: 0.5
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.5
+		timeMultiplier = 0.75
 		#The multiplier to each recipe's output count for Djinni Crystallizer
 		# Default: 1.5
 		# Range: 0.0 ~ 2.147483647E9
-		outputMultiplier = 1.5
+		outputMultiplier = 1.0
 		#Max number of recipes that Djinni Crystallizer make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -221,11 +221,11 @@
 		#The multiplier to each recipe's time for Afrit Crystallizer
 		# Default: 0.3
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.3
+		timeMultiplier = 0.5
 		#The multiplier to each recipe's output count for Afrit Crystallizer
 		# Default: 2.0
 		# Range: 0.0 ~ 2.147483647E9
-		outputMultiplier = 2.0
+		outputMultiplier = 1.0
 		#Max number of recipes that Afrit Crystallizer make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -240,11 +240,11 @@
 		#The multiplier to each recipe's time for Marid Crystallizer
 		# Default: 0.1
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.1
+		timeMultiplier = 0.3
 		#The multiplier to each recipe's output count for Marid Crystallizer
 		# Default: 3.0
 		# Range: 0.0 ~ 2.147483647E9
-		outputMultiplier = 3.0
+		outputMultiplier = 1.0
 		#Max number of recipes that Marid Crystallizer make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -266,7 +266,7 @@
 		#The multiplier to each recipe's time for Djinni Smelter
 		# Default: 0.5
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.5
+		timeMultiplier = 0.75
 		#Max number of recipes that Djinni Smelter make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -277,7 +277,7 @@
 		#The multiplier to each recipe's time for Afrit Smelter
 		# Default: 0.1
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.1
+		timeMultiplier = 0.5
 		#Max number of recipes that Afrit Smelter make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -288,7 +288,7 @@
 		#The multiplier to each recipe's time for Marid Smelter
 		# Default: 0.01
 		# Range: 0.0 ~ 2.147483647E9
-		timeMultiplier = 0.01
+		timeMultiplier = 0.3
 		#Max number of recipes that Marid Smelter make per operation.
 		# Default: 1
 		# Range: 0 ~ 64
@@ -368,21 +368,21 @@
 #Ritual Settings
 [rituals]
 	#Enables the ritual to clear rainy weather.
-	enableClearWeatherRitual = true
+	enableClearWeatherRitual = false
 	#Enables the ritual to start rainy weather.
-	enableRainWeatherRitual = true
+	enableRainWeatherRitual = false
 	#Enables the ritual to start a thunderstorm.
-	enableThunderWeatherRitual = true
+	enableThunderWeatherRitual = false
 	#Enables the ritual to set time to day.
-	enableDayTimeRitual = true
+	enableDayTimeRitual = false
 	#Enables the ritual to set time to night.
-	enableNightTimeRitual = true
+	enableNightTimeRitual = false
 	#If enabled, rituals are interrupted if *more* ingredients are present than needed. This should usually be disabled, but can improve performance if (very very) many rituals are running.
 	enableRemainingIngredientCountMatching = false
 	#Set a value below 1.0 to speed up rituals. Please ensure to use a preceding 0 for values below 1.0, e.g. '0.05' instead of '.05', otherwise Nightconfig (NeoForge's config sytem) will reset the value to 1.0.
 	# Default: 1.0
 	# Range: 0.05 ~ 1.7976931348623157E308
-	ritualDurationMultiplier = 1.0
+	ritualDurationMultiplier = 0.5
 
 #Item Settings
 [items]

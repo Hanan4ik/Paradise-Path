@@ -17,10 +17,12 @@
 	quest.33296E5CEC01EE17.title: "Another other"
 	quest.34FDD0258C790372.title: "Finally 3x3 Crafting"
 	quest.353B89CBB072BDC4.title: "Your honey's MINE"
+	quest.384A3B32C1E0B619.title: "You better know about nether >:("
 	quest.3E0D290A341E5A2A.title: "It had to be burnt"
 	quest.40230646CB814361.title: "There will be soup"
 	quest.42DE9D25819D23C0.title: "Craft wooden axe"
 	quest.46D2FD668BB4AB0E.title: "That's good"
+	quest.4DE1E63ECA3B5258.quest_desc: ["Upgrade your foliot summoning circle &e(Aviar's Circle)&r to djinni summoning circle &e(Ophyx's calling)&r. Djinni circle can perform every foliot tier ritual. "]
 	quest.4DE1E63ECA3B5258.title: "I hope it knows more"
 	quest.53167CC11CF0316C.quest_desc: ["&o&8Note:&r&r This is one of the &leaster eggs&r in the modpack. Each chapter have &4ONLY ONE&r &leaster egg&r (except the first one). Collect all to get &eeaster ending&r :)"]
 	quest.53167CC11CF0316C.quest_subtitle: "I thought it would be easier"
@@ -29,6 +31,7 @@
 	quest.5E469E6CC4F88858.title: "666"
 	quest.68290F1015F5CA26.title: "That's for meat"
 	quest.6A2B33D783246E27.title: "New apartments"
+	quest.6EA454630ADC2DE4.title: "IT ALSO BECAME N"
 	quest.6EAD520576CE988D.title: "Wow, I can see items"
 	quest.7028B46B7448B61C.title: "Why is it cold?"
 	quest.709271EDA4A2D008.title: "needs_iron_tool"

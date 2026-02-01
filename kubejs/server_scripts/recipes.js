@@ -90,6 +90,14 @@ ServerEvents.recipes(event => {
         'kubejs:demonic_calcite_dust'
     );
 
+    event.replaceInput( {id: 'occultism:crafting/chalk_orange_impure'}, 'minecraft:blaze_powder',
+        'kubejs:afrit_dust'
+    );
+
+    event.replaceInput( {id: 'occultism:crafting/chalk_red_impure'}, 'minecraft:torchflower',
+        'kubejs:afrit_dust'
+    );
+
     // Adding recipes to furnace
 
     event.smelting('kubejs:burnt_otherstone', 'occultism:otherstone');
@@ -342,7 +350,8 @@ ServerEvents.recipes(event => {
         'occultism:research_fragment_dust',
         'minecraft:trial_key',
         'kubejs:djinni_dust'
-    ])
+    ]);
+
     
 
 });
