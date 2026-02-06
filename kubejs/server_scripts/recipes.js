@@ -53,12 +53,22 @@ ServerEvents.recipes(event => {
     event.remove({id: 'occultism:crafting/lens_frame_alt'})
     event.remove( {id: 'occultism:crafting/chalk_yellow_impure'} );
     event.remove( {id: 'occultism:crafting/chalk_lime_impure'} );
-    // event.remove( {id: 'occultism:crafting/chalk_purple_impure'} );
 
     event.remove( {id: 'occultism:otherstone_pedestal'} );
     event.remove( {id: 'occultism:storage_controller_base'} );
     event.remove( {id: 'occultism:storage_controller'} );
     event.remove( {id: 'occultism:crafting/chalk_light_gray_impure'} );
+
+    event.remove({id: 'occultism:ritual/craft_storage_remote'});
+    event.remove({id: 'occultism:ritual/craft_fragile_soul_gem'});
+
+    event.remove( {id: 'occultism:crafting/large_candle'} );
+
+    event.remove( {id: 'occultism:crafting/otherstone_tablet'} )
+
+    console.warn('Occultism storage isn\'t modified');
+    console.warn('Occultism wormhole isn\'t modified');
+    console.warn('')
 
     // Modifying crafting table recipes
 
@@ -96,6 +106,13 @@ ServerEvents.recipes(event => {
 
     event.replaceInput( {id: 'occultism:crafting/chalk_red_impure'}, 'minecraft:torchflower',
         'kubejs:afrit_dust'
+    );
+    event.replaceInput( {id: 'occultism:crafting/chalk_gray_impure'}, 'occultism:chalk_white_impure',
+        'occultism:chalk_light_gray_impure'
+    );
+
+    event.replaceInput( {id: 'occultism:crafting/magic_lamp_empty'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot'
     );
 
     // Adding recipes to furnace
@@ -351,6 +368,14 @@ ServerEvents.recipes(event => {
         'minecraft:trial_key',
         'kubejs:djinni_dust'
     ]);
+    event.shapeless('kubejs:demonic_amethyst_shard', [
+        'occultism:gray_paste',
+        'kubejs:demonic_amethyst_dust'
+    ]);
+    
+    event.shaped('occultism:large_candle', ['C', 'T', 'H'],
+        {C: 'minecraft:candle', T: 'occultism:tallow', H: 'minecraft:honeycomb'}
+    )
 
     
 

@@ -3,7 +3,6 @@
 	default_quest_shape: ""
 	filename: "two_eyes_arent_enough"
 	group: "1580B56BA7897E10"
-	hide_quest_until_deps_complete: true
 	icon: {
 		id: "occultism:datura"
 	}
@@ -171,77 +170,37 @@
 			y: -4.0d
 		}
 		{
-			dependencies: ["7E7FD883994BD0C3"]
+			dependencies: [
+				"7E7FD883994BD0C3"
+				"50261A6005AAFFDE"
+			]
 			id: "7D849246668A8CD1"
 			tasks: [{
 				id: "4AA67313AACE86B3"
 				item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(occultism:candles)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
 				type: "item"
 			}]
-			x: 2.0d
-			y: -5.0d
+			x: 3.0d
+			y: -5.5d
 		}
 		{
-			dependencies: ["31EC1C0179987150"]
 			id: "7E7FD883994BD0C3"
+			size: 2.0d
 			tasks: [{
 				id: "0775DBF50FDC1ACD"
 				item: { count: 1, id: "minecraft:candle" }
 				type: "item"
 			}]
-			x: 1.5d
-			y: -6.0d
-		}
-		{
-			dependencies: ["6A2B33D783246E27"]
-			id: "31EC1C0179987150"
-			tasks: [{
-				count: 4L
-				id: "59B17FCFE382BDC2"
-				item: { count: 1, id: "minecraft:honeycomb" }
-				type: "item"
-			}]
-			x: 0.5d
-			y: -6.5d
-		}
-		{
-			dependencies: ["353B89CBB072BDC4"]
-			id: "6A2B33D783246E27"
-			tasks: [{
-				id: "04F19039751B7D9F"
-				item: { count: 1, id: "minecraft:beehive" }
-				type: "item"
-			}]
 			x: -0.5d
-			y: -7.0d
-		}
-		{
-			dependencies: ["5E3BBCC37CB5B586"]
-			id: "353B89CBB072BDC4"
-			size: 2.0d
-			tasks: [{
-				icon: {
-					components: {
-						"ftbquests:icon": "minecraft:textures/entity_icon/bee/bee.png"
-					}
-					id: "ftbquests:custom_icon"
-				}
-				id: "5386149685058536"
-				observe_type: 5
-				timer: 0L
-				to_observe: "minecraft:bee"
-				type: "observation"
-			}]
-			x: -2.0d
 			y: -6.5d
 		}
 		{
 			dependencies: [
 				"0E8BB75C16DF786A"
 				"40230646CB814361"
-				"7D849246668A8CD1"
 				"68290F1015F5CA26"
 				"61E5E6CC7B7D5C04"
+				"7E7FD883994BD0C3"
 			]
 			icon: {
 				id: "occultism:ritual_dummy/custom_ritual_summon"
@@ -281,6 +240,12 @@
 				{
 					id: "24EE937BDB99BB75"
 					item: { components: { "ftbfiltersystem:filter": "ftbfiltersystem:item_tag(c:storage_blocks/gold)" }, count: 1, id: "ftbfiltersystem:smart_filter" }
+					type: "item"
+				}
+				{
+					id: "3F36C94984A4B927"
+					item: { count: 1, id: "occultism:ritual_dummy/summon_foliot_crusher" }
+					optional_task: true
 					type: "item"
 				}
 			]
@@ -379,26 +344,14 @@
 		}
 		{
 			dependencies: ["2C9A187AD2584AE6"]
-			id: "00A0347F1C5AACB5"
-			tasks: [{
-				count: 2L
-				id: "34E3B04874A7A0C5"
-				item: { count: 1, id: "minecraft:experience_bottle" }
-				type: "item"
-			}]
-			x: 7.5d
-			y: -0.5d
-		}
-		{
-			dependencies: ["00A0347F1C5AACB5"]
 			id: "3C52FBF5E9FB043C"
 			tasks: [{
 				id: "73D8D5FB8C39F1FD"
 				item: { count: 1, id: "occultism:research_fragment_dust" }
 				type: "item"
 			}]
-			x: 8.0d
-			y: -1.5d
+			x: 7.5d
+			y: -0.5d
 		}
 		{
 			dependencies: ["1E91C3BA1C9AA0F6"]
@@ -434,6 +387,9 @@
 		}
 		{
 			dependencies: ["74EF82259F6D8BD1"]
+			icon: {
+				id: "occultism:crushed_end_stone"
+			}
 			id: "3305E6F72214F172"
 			tasks: [
 				{
@@ -474,10 +430,22 @@
 		}
 		{
 			dependencies: ["5A4BEEBB098B6BDD"]
+			icon: {
+				components: {
+					"ftbquests:icon": "minecraft:textures/entity_icon/witch.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
 			id: "2C9A187AD2584AE6"
 			tasks: [
 				{
 					entity: "occultism:possessed_witch"
+					icon: {
+						components: {
+							"ftbquests:icon": "minecraft:textures/entity_icon/witch.png"
+						}
+						id: "ftbquests:custom_icon"
+					}
 					id: "3A5903C2C09D9B11"
 					type: "kill"
 					value: 1L
@@ -485,6 +453,13 @@
 				{
 					id: "07FF0D0404BFE52C"
 					item: { count: 1, id: "occultism:ritual_dummy/possess_witch" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					count: 2L
+					id: "00EE014AD0C7E79A"
+					item: { count: 1, id: "minecraft:experience_bottle" }
 					type: "item"
 				}
 			]
@@ -496,6 +471,9 @@
 				"3C52FBF5E9FB043C"
 				"17A084F733E1FE7B"
 			]
+			icon: {
+				id: "occultism:chalk_lime"
+			}
 			id: "72A1024E18F623E1"
 			tasks: [
 				{
@@ -565,6 +543,9 @@
 		}
 		{
 			dependencies: ["057BD2F71C514495"]
+			icon: {
+				id: "occultism:chalk_light_gray"
+			}
 			id: "198A7DAEDDDB9E38"
 			tasks: [
 				{
@@ -631,7 +612,7 @@
 				item: { count: 1, id: "occultism:cursed_honey" }
 				type: "item"
 			}]
-			x: 12.0d
+			x: 11.0d
 			y: -3.0d
 		}
 		{
@@ -701,7 +682,10 @@
 			y: -1.5d
 		}
 		{
-			dependencies: ["5192526E4F3B94DD"]
+			dependencies: [
+				"5192526E4F3B94DD"
+				"25EAC0B688847D51"
+			]
 			icon: {
 				id: "occultism:ritual_dummy/summon_foliot_otherrock_trader"
 			}
@@ -770,6 +754,110 @@
 			}]
 			x: 16.0d
 			y: -3.5d
+		}
+		{
+			dependencies: ["198A7DAEDDDB9E38"]
+			icon: {
+				id: "minecraft:phantom_membrane"
+			}
+			id: "6E5A9A503FC9F3D4"
+			tasks: [
+				{
+					entity: "occultism:possessed_phantom"
+					id: "5AC662D3FB69EFAE"
+					optional_task: true
+					type: "kill"
+					value: 1L
+				}
+				{
+					id: "69170E7E697728A1"
+					item: { count: 1, id: "occultism:ritual_dummy/possess_phantom" }
+					optional_task: true
+					type: "item"
+				}
+				{
+					id: "120F78F90D58F141"
+					item: { count: 1, id: "minecraft:phantom_membrane" }
+					type: "item"
+				}
+			]
+			x: 7.5d
+			y: -5.0d
+		}
+		{
+			dependencies: ["7E7FD883994BD0C3"]
+			icon: {
+				id: "occultism:tallow"
+			}
+			id: "50261A6005AAFFDE"
+			tasks: [
+				{
+					id: "57AA3E807EAAC60D"
+					item: { count: 1, id: "occultism:butcher_knife" }
+					type: "item"
+				}
+				{
+					id: "2C4EF9CF10E9F82E"
+					item: { count: 1, id: "occultism:tallow" }
+					type: "item"
+				}
+			]
+			x: 1.5d
+			y: -6.5d
+		}
+		{
+			dependencies: [
+				"6E5A9A503FC9F3D4"
+				"4DE1E63ECA3B5258"
+			]
+			id: "24C9A6A08EB10333"
+			tasks: [{
+				id: "751292B59EF4645F"
+				item: { count: 1, id: "occultism:gray_paste" }
+				type: "item"
+			}]
+			x: 9.0d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"24C9A6A08EB10333"
+				"4DE1E63ECA3B5258"
+			]
+			id: "25EAC0B688847D51"
+			tasks: [
+				{
+					id: "3592080786778093"
+					item: { count: 1, id: "occultism:chalk_gray" }
+					type: "item"
+				}
+				{
+					id: "6959C167B5CD1959"
+					item: { count: 1, id: "occultism:chalk_gray_impure" }
+					optional_task: true
+					type: "item"
+				}
+			]
+			x: 11.0d
+			y: -5.0d
+		}
+		{
+			icon: {
+				components: {
+					"ftbquests:icon": "occultism:textures/gui/book/familiar_blacksmith.png"
+				}
+				id: "ftbquests:custom_icon"
+			}
+			id: "0C9B109367F0FEC1"
+			tasks: [{
+				id: "7B3F34BEEA1A8F15"
+				observe_type: 5
+				timer: 0L
+				to_observe: "occultism:blacksmith_familiar"
+				type: "observation"
+			}]
+			x: 18.0d
+			y: -2.5d
 		}
 	]
 }

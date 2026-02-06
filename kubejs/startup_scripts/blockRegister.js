@@ -295,7 +295,7 @@ StartupEvents.registry('block', event => {
     .tagItem('c:storage_blocks')
     .tagItem('c:storage_blocks/demonic_silver');
 
-    event.create('demonic_ametyst_block')
+    event.create('demonic_amethyst_block')
     .displayName('Demonic Amethyst Block')
     .soundType('amethyst')
     .requiresTool(true)

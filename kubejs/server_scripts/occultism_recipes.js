@@ -1,11 +1,24 @@
 
 ServerEvents.recipes((event) => {
 
+
+    // result: mod_id:item_id
+    // count: 1, 2, 3
+    // ingredient: {'tag': 'tag_resource:tag'} || {'item': 'mod_id:item_id'}
+    const crystallizeRecipe = (result, count, ingredient, minTier) => {
+        event.custom(
+            {
+            "type": "occultism:crystallize",
+            "ignore_crystallize_multiplier": false,
+            "ingredient": ingredient,
+            "min_tier": minTier,
+            "result": {
+                "type": "occultism:item",
+                "count": count,
+                "id": result
+            }
+            });};
     
-    // spirit_job: what it should do eg: crusher, crystalizer
-    // spirit_tier: tier of spirit eg: 1, 2, 3
-    // ingredientJson: ingredients for ritual eg: [{"item": "minecraft:diamond"}, {"tag: "c:ingots/iron"}]
-    // activatorJson: activator: {"tag: 'c:ingots'"}
     const occultismSpiritFoliot = (spiritJob, ingredientJson) => {
         const SJ = jobMap[spiritJob];
         event.custom(
@@ -178,11 +191,18 @@ ServerEvents.recipes((event) => {
     console.warn('No unbound marid ritual');
     event.remove( {id: 'occultism:ritual/summon_unbound_marid'} );
 
+    event.remove({id: 'occultism:ritual/craft_soul_gem'});
+    console.warn('No trinity gem ritual')
+    event.remove({id: 'occultism:ritual/misc_trinity_gem'});
+
 
     // Disabled rituals
     event.remove( {id: 'occultism:ritual/summon_foliot_crystallizer'} );
     event.remove( {id: 'occultism:ritual/summon_foliot_otherrock_trader'} );
     event.remove( {id: 'occultism:ritual/summon_foliot_transporter'} );
+    event.remove( {id: 'occultism:spirit_trade/gambler_iesnium'} );
+    event.remove( {id: 'occultism:ritual/summon_afrit_thunder_weather'} );
+    event.remove( {id: 'occultism:ritual/summon_afrit_rain_weather'} );
 
     
     event.replaceInput({input: 'occultism:burnt_otherstone'},
@@ -210,6 +230,31 @@ ServerEvents.recipes((event) => {
         'kubejs:demonic_gold_ingot'
     );
     
+    event.replaceInput( {id: 'occultism:ritual/resurrect_allay'}, '#c:dusts/silver', 
+        '#kubejs:demonic_dusts'
+    );
+    event.replaceInput( {id: 'occltism:ritual/craft_infused_pickaxe'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot'
+    );
+
+    event.replaceInput( {id: 'occultism:ritual/craft_familiar_ring'}, '#c:ingots/silver',
+        'kubejs:demonic_silver_ingot'
+    ); 
+    event.replaceInput( {id: 'occultism:ritual/craft_familiar_ring'}, '#c:ingots/gold',
+        'kubejs:demonic_gold_ingot'
+    );
+
+    event.replaceInput( {id: 'occultism:ritual/craft_vitality_compass'}, '#c:gems/amethyst',
+        'kubejs:demonic_amethyst_shard'
+    );
+
+    event.replaceInput( {id: 'occultism:ritual/craft_research_fragment_dust'}, '#c:dusts/emerald',
+        'kubejs:demonic_emerald_dust'
+    );
+
+    event.replaceInput( {id: 'occultism:ritual/familiar_blacksmith'}, '#c:stones',
+        'occultism:otherrock'
+    );
 
     const replaceIngotDust = mat => {
 
@@ -587,11 +632,104 @@ ServerEvents.recipes((event) => {
     }
     );
 
-    console.warn('No otherworld sapling trader');
+    // Othersapling trader
+    event.custom({
+  "type": "occultism:ritual",
+  "activation_item": {
+    "item": "occultism:book_of_binding_bound_foliot"
+  },
+  "duration": 30,
+  "entity_to_summon": "occultism:foliot",
+  "ingredients": [
+    {
+      "item": "occultism:otherworld_sapling_natural"
+    },
+    {
+      "item": "occultism:otherworld_sapling_natural"
+    },
+    {
+      "item": "occultism:otherworld_sapling_natural"
+    },
+    {
+      "item": "occultism:otherworld_sapling_natural"
+    }
+  ],
+  "pentacle_id": "occultism:summon_foliot",
+  "result": {
+    "components": {
+      "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_sapling_trader\"}",
+      "minecraft:lore": [
+        "{\"translate\":\"item.occultism.ritual_dummy.summon_foliot_sapling_trader.tooltip\"}"
+      ]
+    },
+    "count": 1,
+    "id": "occultism:spawn_egg/foliot"
+  },
+  "ritual_dummy": {
+    "count": 1,
+    "id": "occultism:ritual_dummy/summon_foliot_sapling_trader"
+  },
+  "ritual_type": "occultism:summon_spirit_with_job",
+  "spirit_job_type": "occultism:trader_otherworld_saplings",
+  "spirit_max_age": 3600
+});
+
     console.warn('No foliot janitor. Note: one of ingreds is actually additions ranged collector');
     console.warn('No foliot transporter');
     console.warn('No gambler');
     console.warn('No djinni machine operator')
+
+
+    // Familiars adjustments
+
+    event.custom({
+    "type": "occultism:ritual",
+    "activation_item": {
+        "item": "occultism:book_of_binding_bound_foliot"
+    },
+    "duration": 45,
+    "entity_to_sacrifice": {
+        "display_name": "ritual.occultism.sacrifice.cows",
+        "tag": "c:cows"
+    },
+    "entity_to_summon": "occultism:deer_familiar",
+    "ingredients": [
+        {
+        "tag": "c:rods/wooden"
+        },
+        {
+        "tag": "c:rods/wooden"
+        },
+        {
+        "tag": "c:rods/wooden"
+        },
+        {
+        "tag": "c:rods/wooden"
+        },
+        {
+        "tag": "c:strings"
+        },
+        {
+        "tag": "c:strings"
+        }
+    ],
+    "pentacle_id": "occultism:possess_foliot",
+    "result": {
+        "components": {
+        "minecraft:item_name": "{\"translate\":\"item.occultism.ritual_dummy.familiar_deer\"}",
+        "minecraft:lore": [
+            "{\"translate\":\"item.occultism.ritual_dummy.familiar_deer.tooltip\"}"
+        ]
+        },
+        "count": 1,
+        "id": "occultism:spawn_egg/familiar_deer"
+    },
+    "ritual_dummy": {
+        "count": 1,
+        "id": "occultism:ritual_dummy/familiar_deer"
+    },
+    "ritual_type": "occultism:summon_tamed"
+});
 
     // Ritual adjustments
     event.recipes.occultism.ritual(
@@ -665,4 +803,35 @@ ServerEvents.recipes((event) => {
         'kubejs:djinni_dust',
         'occultism:craft_afrit'
     ).dummy("kubejs:ritual_dummy/craft_marid_dust");
+
+    event.recipes.occultism.ritual(
+        'occultism:fragile_soul_gem',
+        [
+            'kubejs:foliot_dust',
+            'kubejs:foliot_dust',
+            'minecraft:lead',
+            'occultism:spirit_attuned_gem'
+        ],
+        'occultism:book_of_binding_bound_foliot',
+        'occultism:craft_foliot'
+    ).dummy('occultism:ritual_dummy/craft_fragile_soul_gem');
+
+    event.recipes.occultism.ritual(
+        'occultism:soul_gem',
+        [
+            'kubejs:djinni_dust',
+            'kubejs:afrit_dust',
+            'occultism:fragile_soul_gem',
+            'occultism:fragile_soul_gem',
+            'occultism:fragile_soul_gem',
+            'occultism:fragile_soul_gem',
+            '#minecraft:soul_fire_base_blocks',
+            '#minecraft:soul_fire_base_blocks',
+            'kubejs:demonic_amethyst_shard',
+        ],
+        'occultism:book_of_binding_bound_djinni',
+        'occultism:craft_djinni'
+    ).dummy('occultism:ritual_dummy/craft_soul_gem');
+
+
 });

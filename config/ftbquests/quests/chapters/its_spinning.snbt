@@ -4,10 +4,33 @@
 	filename: "its_spinning"
 	group: "1580B56BA7897E10"
 	icon: {
-		id: "create:wrench"
+		id: "modern_industrialization:steel_ingot"
 	}
 	id: "744EC85C71CC39BB"
 	order_index: 2
 	quest_links: [ ]
-	quests: [ ]
+	quests: [
+		{
+			id: "634713F6D1BEBBDB"
+			size: 2.0d
+			tasks: [{
+				id: "4CF2CFDB13E7F42A"
+				item: { count: 1, id: "create:andesite_alloy" }
+				type: "item"
+			}]
+			x: -4.5d
+			y: -1.0d
+		}
+		{
+			id: "4C2ADA1FC69AE081"
+			size: 2.0d
+			tasks: [{
+				id: "195B3DA1C3275EA6"
+				item: { count: 1, id: "modern_industrialization:steel_ingot" }
+				type: "item"
+			}]
+			x: 10.5d
+			y: -1.0d
+		}
+	]
 }
