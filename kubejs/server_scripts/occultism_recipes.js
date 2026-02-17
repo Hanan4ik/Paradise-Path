@@ -695,17 +695,43 @@ ServerEvents.recipes((event) => {
     "entity_to_summon": "occultism:deer_familiar",
     "ingredients": [
         {
-        "tag": "c:rods/wooden"
+      "type": "neoforge:components",
+      "components": {
+        "minecraft:attribute_modifiers": {
+          "modifiers": []
         },
+        "minecraft:enchantments": {
+          "levels": {}
+        },
+        "minecraft:lore": [],
+        "minecraft:max_stack_size": 1,
+        "minecraft:potion_contents": {
+          "potion": "minecraft:leaping"
+        },
+        "minecraft:rarity": "common",
+        "minecraft:repair_cost": 0
+      },
+      "items": "minecraft:potion"
+    },
         {
-        "tag": "c:rods/wooden"
+      "type": "neoforge:components",
+      "components": {
+        "minecraft:attribute_modifiers": {
+          "modifiers": []
         },
-        {
-        "tag": "c:rods/wooden"
+        "minecraft:enchantments": {
+          "levels": {}
         },
-        {
-        "tag": "c:rods/wooden"
+        "minecraft:lore": [],
+        "minecraft:max_stack_size": 1,
+        "minecraft:potion_contents": {
+          "potion": "minecraft:swiftness"
         },
+        "minecraft:rarity": "common",
+        "minecraft:repair_cost": 0
+      },
+      "items": "minecraft:potion"
+    },
         {
         "tag": "c:strings"
         },

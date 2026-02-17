@@ -64,7 +64,11 @@ ServerEvents.recipes(event => {
 
     event.remove( {id: 'occultism:crafting/large_candle'} );
 
-    event.remove( {id: 'occultism:crafting/otherstone_tablet'} )
+    event.remove( {id: 'occultism:crafting/otherstone_tablet'} );
+
+    event.remove({id: 'minecraft:dropper'});
+    event.remove({id: 'minecraft:piston'});
+    event.remove({id: 'minecraft:dispenser'});
 
     console.warn('Occultism storage isn\'t modified');
     console.warn('Occultism wormhole isn\'t modified');
@@ -375,9 +379,29 @@ ServerEvents.recipes(event => {
     
     event.shaped('occultism:large_candle', ['C', 'T', 'H'],
         {C: 'minecraft:candle', T: 'occultism:tallow', H: 'minecraft:honeycomb'}
-    )
+    );
 
-    
+    event.shaped('minecraft:piston', [
+        'CCC',
+        'PIP',
+        'PRP'
+    ], {
+        C: 'kubejs:compressed_cobblestone',
+        P: '#minecraft:planks',
+        R: 'minecraft:redstone',
+        I: '#c:rods/iron'
+    });
+
+    event.shaped('minecraft:dropper', [
+        'CCC',
+        'CPC',
+        'CRC'
+    ], {
+        C: 'kubejs:compressed_cobblestone',
+        P: 'minecraft:piston',
+        R: 'minecraft:redstone'
+    });
+    event.shapeless('minecraft:dispenser', ['minecraft:dropper', 'minecraft:bow']); 
 
 });
 
