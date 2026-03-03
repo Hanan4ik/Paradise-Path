@@ -22,6 +22,7 @@
 			y: -1.0d
 		}
 		{
+			dependencies: ["4A490552D8B110EA"]
 			id: "4C2ADA1FC69AE081"
 			size: 2.0d
 			tasks: [{
@@ -31,6 +32,156 @@
 			}]
 			x: 10.5d
 			y: -1.0d
+		}
+		{
+			id: "0716D763634D4828"
+			tasks: [{
+				count: 27L
+				id: "0F3FD287AE6523A2"
+				item: { count: 1, id: "immersiveengineering:cokebrick" }
+				type: "item"
+			}]
+			x: -3.0d
+			y: -2.0d
+		}
+		{
+			id: "49F736E6556CD519"
+			tasks: [{
+				id: "7EBCC8E64A520F60"
+				item: { count: 1, id: "create:hand_crank" }
+				type: "item"
+			}]
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			id: "3DD44291B1DC3CE6"
+			tasks: [{
+				id: "42BE3E7AAF5A8035"
+				item: { count: 1, id: "create:mechanical_press" }
+				type: "item"
+			}]
+			x: -1.0d
+			y: -1.5d
+		}
+		{
+			id: "0F0B9738FA8AB92C"
+			tasks: [
+				{
+					id: "3B273547EEB97AF4"
+					item: { count: 1, id: "immersiveengineering:coal_coke" }
+					type: "item"
+				}
+				{
+					id: "0FDA9F2B3EFE46C4"
+					item: { count: 1, id: "immersiveengineering:creosote_bucket" }
+					type: "item"
+				}
+			]
+			x: -2.0d
+			y: -3.0d
+		}
+		{
+			id: "2AE0B41751AAD34C"
+			tasks: [{
+				count: 8L
+				id: "4FB8FAEFF8BBDD1E"
+				item: { count: 1, id: "immersiveengineering:treated_wood_horizontal" }
+				type: "item"
+			}]
+			x: -0.5d
+			y: -2.5d
+		}
+		{
+			id: "2C54176DA6D8C323"
+			tasks: [{
+				id: "31BA0B291559E3E4"
+				item: { count: 1, id: "create:water_wheel" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: 0.5d
+		}
+		{
+			id: "233C8F7FA668CCE9"
+			tasks: [{
+				id: "76B31DFC2386C1F8"
+				item: { count: 1, id: "create:large_water_wheel" }
+				type: "item"
+			}]
+			x: 1.5d
+			y: 0.0d
+		}
+		{
+			id: "2B9A16924CBEBCD6"
+			tasks: [{
+				id: "7E641AD69540E3F8"
+				item: { count: 1, id: "immersiveengineering:watermill" }
+				type: "item"
+			}]
+			x: 2.5d
+			y: 0.5d
+		}
+		{
+			id: "5F5460600A44E0B4"
+			tasks: [{
+				id: "6E0E79EC20199201"
+				item: { count: 1, id: "create:cogwheel" }
+				type: "item"
+			}]
+			x: 0.5d
+			y: -3.5d
+		}
+		{
+			id: "1AE8C9F69133993D"
+			tasks: [{
+				id: "10117CB84F0F3CD1"
+				item: { count: 1, id: "create:mechanical_mixer" }
+				type: "item"
+			}]
+			x: 2.0d
+			y: -4.0d
+		}
+		{
+			id: "12FBE2B666A5B924"
+			tasks: [{
+				id: "0C20EB24059C2564"
+				item: { count: 1, id: "create:empty_blaze_burner" }
+				type: "item"
+			}]
+			x: 4.0d
+			y: -4.0d
+		}
+		{
+			id: "4E7ABEEE7D7719D8"
+			tasks: [{
+				id: "50AAA084B16FA2B7"
+				item: { count: 1, id: "create:blaze_burner" }
+				type: "item"
+			}]
+			x: 5.5d
+			y: -3.5d
+		}
+		{
+			id: "17A33F7B60657CCE"
+			tasks: [{
+				id: "00A3DADB968FC292"
+				item: { count: 1, id: "create:brass_ingot" }
+				type: "item"
+			}]
+			x: 6.5d
+			y: -2.5d
+		}
+		{
+			id: "4A490552D8B110EA"
+			tasks: [{
+				count: 27L
+				id: "06E3D08074D21C85"
+				item: { count: 1, id: "immersiveengineering:blastbrick" }
+				type: "item"
+			}]
+			x: 7.5d
+			y: -1.5d
 		}
 	]
 }
